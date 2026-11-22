@@ -1,0 +1,1078 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Public Samta Press</title>
+<meta name="description" content="Public Samta Press: write what is wrong without your name, and we carry it to the office that must answer. Care · Compassion · Courage.">
+<meta property="og:title" content="Public Samta Press"><meta property="og:description" content="The people's press, carried to the office that must answer."><meta property="og:image" content="https://samtapress.in/psp-social-share-1200x630.png"><meta property="og:url" content="https://samtapress.in/">
+<link rel="icon" href="favicon.ico"><link rel="apple-touch-icon" href="psp-favicon-512.png">
+
+<style>
+/* Layout: a public desk. One site, six pages switched by the menu: Home, an article, Submit, Track, Know your rights, How we verify. */
+:root{
+  --paper:#F7F6F2; --ink:#14171F; --blue:#1F4FA3; --gold:#A87A22; --muted:#5A6072;
+  --rule:#DCD9CF; --tint:#E8ECF5; --on-blue:#F7F6F2; --sheet:#EFEDE6; --foot:#14171F; --foot-fg:#F7F6F2;
+  --lk:var(--ink); --lb:var(--blue); --lg:var(--gold); --lp:var(--paper);
+  --sans:"Archivo","Noto Sans Kannada","Helvetica Neue",Arial,sans-serif;
+  --narrow:"Archivo Narrow","Noto Sans Kannada","Arial Narrow",Arial,sans-serif;
+  --serif:"Newsreader","Noto Serif Kannada",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0E1320; --ink:#EEF0F5; --blue:#6E9BEA; --gold:#D9B25A; --muted:#A3AABB;
+  --rule:#273044; --tint:#18213A; --on-blue:#0E1320; --sheet:#131a2b; --foot:#070A12; --foot-fg:#EEF0F5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0E1320; --ink:#EEF0F5; --blue:#6E9BEA; --gold:#D9B25A; --muted:#A3AABB;
+  --rule:#273044; --tint:#18213A; --on-blue:#0E1320; --sheet:#131a2b; --foot:#070A12; --foot-fg:#EEF0F5; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.6;margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:0}
+a{color:inherit;text-decoration-color:var(--rule);text-underline-offset:3px}
+a:hover{color:var(--blue);text-decoration-color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+h1,h2,h3,h4{text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+.label{font-family:var(--narrow);font-size:12.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+.label.blue{color:var(--blue)}
+.sample{font-family:var(--narrow);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid currentColor;padding:0 5px;border-radius:2px;opacity:.8;white-space:nowrap;vertical-align:2px}
+.tag{font-family:var(--narrow);font-weight:700;letter-spacing:.32em;text-transform:uppercase;font-size:13px;color:var(--gold)}
+
+/* demo bar */
+.demo{background:var(--ink);color:var(--paper);font:500 13px var(--narrow)}
+.demo .wrap{display:flex;justify-content:space-between;align-items:center;gap:8px 16px;flex-wrap:wrap;padding-block:7px}
+.demo .theme{display:inline-flex;gap:2px}
+.demo button{font:600 12px var(--narrow);background:transparent;color:var(--paper);border:1px solid rgba(255,255,255,.3);padding:2px 9px;border-radius:2px;cursor:pointer}
+:root[data-theme="dark"] .demo button,.demo button{border-color:color-mix(in srgb,var(--paper) 35%,transparent)}
+.demo button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+
+/* header */
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper)}
+.util{border-bottom:1px solid var(--rule);font-family:var(--narrow);font-size:13px;color:var(--muted)}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:6px}
+.util .l,.util .r{display:flex;align-items:center;gap:18px}
+.promise{display:inline-flex;align-items:center;gap:7px;color:var(--ink)}
+.dots{display:inline-flex;gap:3px}
+.dots b{width:7px;height:7px;border-radius:50%;background:var(--gold);display:block}
+.util a{text-decoration:none;font-weight:600;color:var(--ink)}
+.lang{display:inline-flex;border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.lang button{font:600 12.5px var(--narrow);background:transparent;color:var(--ink);border:0;padding:3px 10px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--blue);color:var(--on-blue)}
+.mast .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:18px 16px}
+.mast .logo{height:76px;width:auto;display:block}
+.mast .mid{display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center}
+.mast .mid small{font-family:var(--narrow);font-size:13px;color:var(--muted)}
+.act{display:flex;align-items:center;gap:10px}
+.icon-btn{width:42px;height:42px;display:inline-grid;place-items:center;border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:50%;cursor:pointer;flex:none}
+.icon-btn svg{width:18px;height:18px}
+.cta{display:inline-flex;align-items:center;gap:10px;font:700 15px var(--narrow);letter-spacing:.05em;text-transform:uppercase;background:var(--blue);color:var(--on-blue);border:0;border-radius:3px;padding:11px 18px 11px 12px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.cta:hover{color:var(--on-blue);filter:brightness(1.08)}
+.cta .voice{width:30px;height:30px;flex:none;--lb:var(--on-blue);--lp:var(--blue);--lg:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:700 14px var(--narrow);letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--blue);color:var(--blue);background:transparent;padding:10px 16px;border-radius:3px;cursor:pointer;text-decoration:none}
+nav.beats{border-top:3px solid var(--ink);border-bottom:1px solid var(--rule)}
+nav.beats ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;overflow-x:auto}
+nav.beats a{display:block;padding:11px 0 9px;font:600 15px var(--narrow);letter-spacing:.02em;text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap}
+nav.beats a[aria-current="page"]{color:var(--blue);border-bottom-color:var(--blue)}
+nav.beats li.push{margin-left:auto}
+nav.beats li.push a{color:var(--muted);font-weight:500}
+.carry{background:var(--blue);color:var(--on-blue);font:500 14px var(--narrow)}
+.carry .wrap{display:flex;align-items:center;gap:20px;padding-block:7px;white-space:nowrap;overflow:hidden}
+.carry strong{font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+.carry b{font-family:var(--sans);font-weight:800;font-variant-numeric:tabular-nums;margin-right:4px}
+.carry .sep{opacity:.5}
+.carry .sample{margin-left:auto}
+.m-only{display:none}
+
+/* condensed when scrolled */
+header.site.slim .util,header.site.slim .carry{display:none}
+header.site.slim .mast .wrap{padding-block:8px}
+header.site.slim .mast .logo{height:42px}
+header.site.slim .mast .mid{display:none}
+header.site.slim .cta{padding:7px 14px 7px 9px;font-size:13.5px}
+header.site.slim .cta .voice{width:24px;height:24px}
+
+/* drawer */
+.drawer{position:fixed;inset:0;z-index:50;background:var(--paper);display:flex;flex-direction:column;overflow-y:auto;padding-top:env(safe-area-inset-top,0px)}
+.drawer[hidden]{display:none}
+.drawer .top{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:3px solid var(--ink)}
+.drawer .top .logo{height:44px;width:auto}
+.drawer ul{list-style:none;margin:0;padding:6px 16px}
+.drawer li a{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--rule);font:600 18px var(--narrow);text-decoration:none}
+.drawer li a::after{content:"→";color:var(--muted)}
+.drawer li a[aria-current="page"]{color:var(--blue)}
+.drawer .box{margin:10px 16px;padding:14px;background:var(--tint);display:flex;flex-direction:column;gap:8px}
+.drawer .fine{margin-top:auto;padding:16px;font:500 13px var(--narrow);color:var(--muted);display:flex;flex-direction:column;gap:8px}
+
+/* pages */
+main{min-height:60vh}
+section.page{display:block}
+section.page[hidden]{display:none}
+.row{padding-block:30px;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap;margin-bottom:18px}
+.head h2{font-family:var(--sans);font-size:24px;font-weight:800;letter-spacing:-.01em}
+.head a{font:600 14px var(--narrow);text-decoration:none;color:var(--blue)}
+
+/* home hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;padding-block:34px;border-bottom:1px solid var(--rule)}
+.hero h1{font-family:var(--serif);font-size:clamp(34px,4.6vw,58px);font-weight:700;letter-spacing:-.015em;line-height:1.05;margin-block:10px 14px}
+.hero h1 em{font-weight:400;color:var(--blue)}
+.dek{font-size:19px;color:var(--muted);max-width:58ch}
+.ticks{display:flex;gap:8px 18px;flex-wrap:wrap;font:600 14px var(--narrow);color:var(--blue);margin-block:18px 22px}
+.ticks span::before{content:"✓ "}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.route{background:var(--blue);color:var(--on-blue);padding:24px;display:flex;flex-direction:column;gap:12px;align-self:start}
+.route .label{color:var(--on-blue);opacity:.8}
+.route ol{list-style:none;margin:0;padding:0;counter-reset:st}
+.route li{counter-increment:st;display:grid;grid-template-columns:40px 1fr;gap:10px;padding-block:11px;border-top:1px solid color-mix(in srgb,var(--on-blue) 22%,transparent)}
+.route li::before{content:counter(st);font:800 30px var(--sans);line-height:1}
+.route b{font:700 19px var(--serif);display:block;line-height:1.2}
+.route li span{font-size:15px;opacity:.88}
+.route small{font:500 12px var(--narrow);opacity:.8}
+
+/* story grid */
+.lead{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px}
+.story{display:flex;flex-direction:column;gap:8px;min-width:0;text-decoration:none}
+.story:hover h3{color:var(--blue)}
+.story .meta{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font:500 13px var(--narrow);color:var(--muted)}
+.story h3{font:700 22px/1.2 var(--serif)}
+.story.big h3{font-size:clamp(28px,3.2vw,38px)}
+.story p{font-size:16.5px;color:var(--muted)}
+.plate{aspect-ratio:16/9;max-width:100%;background:var(--sheet);border:1px solid var(--rule);display:grid;place-items:center;position:relative;overflow:hidden}
+.plate svg{width:46%;height:auto;opacity:.9}
+.stack{display:flex;flex-direction:column;gap:0}
+.stack .story{padding-block:16px;border-top:1px solid var(--rule)}
+.stack .story:first-child{border-top:0;padding-top:0}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.grid3 .story{border-top:3px solid var(--ink);padding-top:12px}
+.stamps{display:inline-flex;gap:4px;align-items:center}
+.stamps i{width:9px;height:9px;border-radius:50%;background:var(--gold);display:block}
+.stamps i.no{background:transparent;border:1.5px solid var(--gold)}
+.pill{font:600 12.5px var(--narrow);padding:1px 9px;border-radius:20px;white-space:nowrap;border:1px solid currentColor}
+.pill.sent{color:var(--gold)} .pill.reply{color:var(--on-blue);background:var(--blue);border-color:var(--blue)} .pill.rti{color:var(--ink)} .pill.review{color:var(--muted)}
+
+/* table */
+.table{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:16px;min-width:640px}
+th{font:600 12px var(--narrow);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 12px 8px 0;border-bottom:1px solid var(--ink)}
+td{padding:12px 12px 12px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+td.t{font-weight:600}
+td.d,td.n{font:500 14.5px var(--narrow);color:var(--muted)}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* rights strip */
+.rights{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--rule)}
+.right{padding:14px 14px 16px 0;border-right:1px solid var(--rule);display:flex;flex-direction:column;gap:5px;min-width:0}
+.right + .right{padding-left:14px}
+.right:last-child{border-right:0}
+.right .num{font:800 24px var(--sans);color:var(--blue);line-height:1.1}
+.right p{font-size:15px}
+.right .why{font-size:13.5px;color:var(--muted);border-top:1px dotted var(--rule);padding-top:6px}
+
+/* submit band */
+.band{background:var(--sheet);border-block:1px solid var(--rule)}
+.band .wrap{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px 28px;align-items:center;padding-block:26px}
+.band .big-voice{width:72px;height:72px}
+.band h2{font:700 26px var(--serif)}
+.band p{color:var(--muted);font-size:16px}
+
+/* article page */
+.art{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;padding-block:32px}
+.art header{display:flex;flex-direction:column;gap:12px;padding-bottom:20px;border-bottom:1px solid var(--rule);margin-bottom:22px}
+.art h1{font:700 clamp(32px,4.4vw,52px)/1.08 var(--serif);letter-spacing:-.015em}
+.art .standfirst{font-size:21px;color:var(--muted);line-height:1.45}
+.byline{display:flex;flex-wrap:wrap;gap:6px 16px;font:500 14px var(--narrow);color:var(--muted)}
+.byline b{color:var(--ink)}
+.body{max-width:66ch;display:flex;flex-direction:column;gap:18px}
+.body p:first-child::first-letter{font:700 64px/0.85 var(--serif);float:left;margin:6px 10px 0 0;color:var(--blue)}
+.body blockquote{margin:6px 0;padding-left:18px;border-left:3px solid var(--gold);font-style:italic;font-size:20px}
+.body h3{font:800 18px var(--sans);margin-top:8px}
+.reply-box{border:1px solid var(--rule);padding:18px;display:flex;flex-direction:column;gap:8px;background:var(--sheet)}
+aside.rail{display:flex;flex-direction:column;gap:22px;min-width:0}
+.card{border-top:3px solid var(--ink);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.card h4{font:800 15px var(--sans);letter-spacing:.01em}
+.approvals{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.approvals li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:15px;line-height:1.35}
+.approvals li::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--gold);margin-top:3px;box-shadow:inset 0 0 0 4px var(--paper),0 0 0 1.5px var(--gold)}
+.approvals small{display:block;font:500 13px var(--narrow);color:var(--muted)}
+.clock{display:flex;align-items:baseline;gap:8px}
+.clock b{font:800 44px var(--sans);color:var(--blue);line-height:1;font-variant-numeric:tabular-nums}
+.meter{height:6px;background:var(--rule);border-radius:3px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--gold)}
+
+/* forms */
+.formpage{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:44px;padding-block:32px}
+.formpage h1{font:700 clamp(32px,4vw,46px)/1.1 var(--serif);margin-block:8px 10px}
+form.f{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font:600 12.5px var(--narrow);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.field small{font:500 13px var(--narrow);color:var(--muted)}
+input,select,textarea{font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:2px;width:100%;min-width:0}
+textarea{min-height:170px;resize:vertical;line-height:1.5}
+.check{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-size:15.5px}
+.check input{width:auto;margin-top:6px}
+.actions{grid-column:1/-1;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.msg{grid-column:1/-1;font:500 14.5px var(--narrow);background:var(--tint);padding:10px 12px;border-left:3px solid var(--blue)}
+.msg.err{border-left-color:var(--gold)}
+.safe{background:var(--sheet);padding:22px;display:flex;flex-direction:column;gap:14px;align-self:start}
+.safe ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:15.5px}
+.safe .law{font:500 13px var(--narrow);color:var(--muted);border-top:1px solid var(--rule);padding-top:10px}
+
+/* track */
+.trackform{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end;margin-top:18px;max-width:520px}
+.trackform .field{flex:1 1 220px}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:76px 18px 1fr;gap:10px;padding-bottom:14px}
+.timeline time{font:500 13.5px var(--narrow);color:var(--muted);font-variant-numeric:tabular-nums;padding-top:3px}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--blue);margin-top:7px;position:relative}
+.timeline li:not(:last-child) .dot::after{content:"";position:absolute;left:5px;top:12px;width:2px;height:calc(100% + 34px);background:var(--rule)}
+.timeline li.next .dot{background:var(--paper);border:2px solid var(--gold)}
+.timeline p{font-size:16.5px}
+
+/* rights page */
+.law-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+.law-item{display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 18px;padding-block:18px;border-top:1px solid var(--rule)}
+.law-item .num{font:800 21px var(--sans);color:var(--blue);line-height:1.2}
+.law-item h3{font:700 19px var(--serif)}
+.law-item p{font-size:16px;color:var(--muted)}
+.law-item .case{font:600 13.5px var(--narrow);color:var(--ink);margin-top:4px}
+
+/* verify page */
+.people{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.person{border-top:3px solid var(--gold);padding-top:14px;display:flex;flex-direction:column;gap:8px}
+.person h3{font:800 19px var(--sans)}
+.person p{font-size:16px;color:var(--muted)}
+.person ul{margin:0;padding-left:18px;font-size:15.5px;display:flex;flex-direction:column;gap:4px}
+.never{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 40px;margin-top:6px}
+.never p{font-size:16px;padding-left:16px;border-left:3px solid var(--blue)}
+
+/* footer */
+footer.site{background:var(--foot);color:var(--foot-fg);margin-top:20px}
+footer.site .wrap{padding-block:34px 28px;display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:28px}
+footer.site .logo{height:58px;width:auto;--lk:var(--foot-fg);--lp:var(--foot);--lb:#6E9BEA;--lg:#D9B25A}
+footer.site h4{font:700 12.5px var(--narrow);letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-bottom:10px}
+footer.site ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font:500 15px var(--narrow)}
+footer.site a{text-decoration:none}
+footer.site a:hover{color:inherit;text-decoration:underline}
+footer.site .about{font-size:15px;display:flex;flex-direction:column;gap:12px}
+footer.site .about > p{opacity:.85}
+footer.site .pledge{border-left:3px solid #D9B25A;padding-left:12px;display:flex;flex-direction:column;gap:3px}
+footer.site .pledge p{font:600 17px/1.35 var(--serif)}
+footer.site .pledge small{font:500 12.5px var(--narrow);opacity:.7;letter-spacing:.02em}
+.drawer .pledge-m{font:600 14px/1.35 var(--serif);color:var(--ink)}
+footer.site .grv{font:500 14px var(--narrow);opacity:.85}
+footer.site .base{grid-column:1/-1;border-top:1px solid color-mix(in srgb,var(--foot-fg) 20%,transparent);padding-top:14px;display:flex;justify-content:space-between;gap:8px 20px;flex-wrap:wrap;font:500 13px var(--narrow);opacity:.75}
+
+html[lang="kn"] body{font-size:17px}
+html[lang="kn"] .tag{letter-spacing:.1em}
+
+@media (max-width:980px){
+  .hero,.lead,.formpage,.art{grid-template-columns:1fr}
+  .rights{grid-template-columns:1fr 1fr}
+  .right,.right + .right{padding:12px 12px 12px 0;border-right:0;border-bottom:1px solid var(--rule)}
+  .right:nth-child(even){padding-left:12px;border-left:1px solid var(--rule)}
+  .grid3,.people{grid-template-columns:1fr}
+  .law-list,.never{grid-template-columns:1fr}
+  footer.site .wrap{grid-template-columns:1fr 1fr}
+  footer.site .wrap > :first-child{grid-column:1/-1}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .util,.mast .mid,nav.beats,.carry .d-only,.d-only{display:none}
+  .m-only{display:block}
+  .mast .wrap{padding-block:10px;gap:10px}
+  .mast .logo{height:44px;max-width:60vw}
+  .mast .cta{width:44px;height:44px;padding:0;border-radius:50%;justify-content:center}
+  .mast .cta span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .mast .cta .voice{width:28px;height:28px}
+  .mast{border-bottom:3px solid var(--ink)}
+  .m-tag .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:6px;border-bottom:1px solid var(--rule)}
+  .m-tag .tag{font-size:10.5px;letter-spacing:.22em}
+  .m-tag .lang button{padding:2px 8px;font-size:11.5px}
+  .carry .wrap{font-size:12.5px;gap:10px}
+  .carry strong{font-size:11px}
+  header.site.slim .m-tag{display:none}
+  header.site.slim .mast .logo{height:38px}
+  .band .wrap{grid-template-columns:auto minmax(0,1fr)}
+  .band .wrap .cta{grid-column:1/-1;justify-self:start}
+  form.f{grid-template-columns:1fr}
+  .law-item{grid-template-columns:1fr}
+  .rights{grid-template-columns:1fr}
+  .right:nth-child(even){padding-left:0;border-left:0}
+  footer.site .wrap{grid-template-columns:1fr}
+  .timeline li{grid-template-columns:62px 18px 1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<style id="nocturne">
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 449;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format("woff2")}@font-face{font-family:"Inter";font-style:normal;font-weight:450 549;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format("woff2")}@font-face{font-family:"Inter";font-style:normal;font-weight:550 649;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format("woff2")}@font-face{font-family:"Inter";font-style:normal;font-weight:650 900;font-display:swap;src:url(fonts/inter-latin-700-normal.woff2) format("woff2")}@font-face{font-family:"Noto Sans Kannada";font-style:normal;font-weight:100 449;font-display:swap;src:url(fonts/noto-sans-kannada-kannada-400-normal.woff2) format("woff2");unicode-range:U+0C80-0CFF,U+200C-200D,U+25CC}@font-face{font-family:"Noto Sans Kannada";font-style:normal;font-weight:450 549;font-display:swap;src:url(fonts/noto-sans-kannada-kannada-500-normal.woff2) format("woff2");unicode-range:U+0C80-0CFF,U+200C-200D,U+25CC}@font-face{font-family:"Noto Sans Kannada";font-style:normal;font-weight:550 649;font-display:swap;src:url(fonts/noto-sans-kannada-kannada-600-normal.woff2) format("woff2");unicode-range:U+0C80-0CFF,U+200C-200D,U+25CC}@font-face{font-family:"Noto Sans Kannada";font-style:normal;font-weight:650 900;font-display:swap;src:url(fonts/noto-sans-kannada-kannada-700-normal.woff2) format("woff2");unicode-range:U+0C80-0CFF,U+200C-200D,U+25CC}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}*{font-synthesis:none}button,input,select,textarea{font-family:inherit}body,.label,.tag,.btn,.cta,nav.beats a,th,td,.pill,.meta,.byline{font-family:"Inter","Noto Sans Kannada",sans-serif}
+
+/* Nocturne theme layer for PSP: dark blue-grey ground, Inter, outlined actions, one blurple accent. Logo keeps PSP blue and gold. */
+:root,:root[data-theme="light"],:root[data-theme="dark"]{
+  --n-bg:#161826; --n-surface:#232532; --n-text:#e9e9ed; --n-accent:#9184d9; --n-accent-300:#d2cefd; --n-accent-800:#423a6a;
+  --n-divider:color-mix(in srgb,#e9e9ed 16%,transparent); --n-muted:color-mix(in srgb,#e9e9ed 60%,transparent);
+  --paper:var(--n-bg); --ink:var(--n-text); --blue:var(--n-accent); --gold:var(--n-accent-300); --muted:var(--n-muted);
+  --rule:var(--n-divider); --tint:var(--n-accent-800); --on-blue:var(--n-bg); --sheet:var(--n-surface); --foot:#11121c; --foot-fg:var(--n-text);
+  --lk:var(--n-text); --lb:#6E9BEA; --lg:#D9B25A; --lp:var(--n-bg);
+  --sans:"Inter","Noto Sans Kannada",system-ui,sans-serif; --narrow:"Inter","Noto Sans Kannada",system-ui,sans-serif; --serif:"Inter","Noto Sans Kannada",system-ui,sans-serif;
+  color-scheme:dark}
+body{font-size:16px;line-height:1.6}
+h1,h2,h3,h4,.hero h1,.art h1,.formpage h1,.story h3,.route b,.band h2,.law-item h3,.person h3,.head h2,.card h4{font-weight:500!important;letter-spacing:-.015em}
+.hero h1{font-size:clamp(32px,4.2vw,52px)} .hero h1 em{font-style:normal;color:var(--n-accent)}
+.label,.tag{letter-spacing:.1em}
+.tag{color:var(--n-accent-300)}
+.cta{background:transparent;color:var(--n-accent);border:1px solid var(--n-accent);border-radius:8px;font-weight:500;text-transform:none;letter-spacing:0}
+.cta:hover{color:var(--n-accent);background:color-mix(in srgb,var(--n-accent) 12%,transparent);filter:none}
+.cta:active{background:color-mix(in srgb,var(--n-accent) 22%,transparent)}
+.cta .voice{--lb:var(--n-accent);--lp:var(--n-bg);--lg:#D9B25A}
+.btn{border-color:var(--n-divider);color:var(--n-text);border-radius:8px;font-weight:500;text-transform:none;letter-spacing:0}
+.btn:hover{background:color-mix(in srgb,var(--n-text) 7%,transparent)}
+.route{background:linear-gradient(160deg,#262a60,#353b80);color:var(--n-text);border-radius:14px}
+.route .label{color:var(--n-accent-300)}
+.route li{border-top-color:color-mix(in srgb,var(--n-text) 18%,transparent)}
+.band{background:var(--n-surface);border:0}
+.plate,.reply-box,.safe{background:var(--n-surface);border:0;border-radius:8px}
+.lang button[aria-pressed="true"]{background:var(--n-accent-800);color:var(--n-accent-300)}
+.pill.reply{background:var(--n-accent-800);color:var(--n-accent-300);border-color:var(--n-accent-800)}
+nav.beats{border-top:1px solid var(--n-divider)}
+nav.beats a{font-weight:500}
+.mast{border-bottom-color:var(--n-divider)}
+input,select,textarea{background:var(--n-surface);border-color:var(--n-divider);border-radius:8px;color:var(--n-text)}
+input:focus-visible,select:focus-visible,textarea:focus-visible{border-color:var(--n-accent)}
+:focus-visible{outline-color:var(--n-accent)}
+::selection{background:color-mix(in srgb,var(--n-accent) 30%,transparent)}
+.body p:first-child::first-letter{font-weight:500;color:var(--n-accent)}
+.grid3 .story,.card,.person{border-top-width:1px;border-top-color:var(--n-divider)}
+.law-item .num,.right .num{font-weight:600}
+footer.site{background:#11121c}
+body{background:radial-gradient(1200px 520px at 15% -8%,color-mix(in srgb,#353b80 55%,transparent),transparent 70%),radial-gradient(900px 480px at 100% 12%,color-mix(in srgb,#262a60 50%,transparent),transparent 70%) no-repeat,var(--n-bg)}
+header.site{background:color-mix(in srgb,var(--n-bg) 82%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.drawer{background:var(--n-bg)}
+.tabs{display:inline-flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.tabs button{font:500 14px var(--sans);color:var(--n-text);background:transparent;border:1px solid var(--n-divider);border-radius:8px;padding:6px 12px;cursor:pointer}
+.tabs button:hover{background:color-mix(in srgb,var(--n-text) 7%,transparent)}
+.tabs button[aria-pressed="true"]{color:var(--n-accent);border-color:var(--n-accent);background:color-mix(in srgb,var(--n-accent) 12%,transparent)}
+.lawgroup[hidden]{display:none}
+.vhero{padding-block:34px 10px}
+.vhero h1{font:500 clamp(32px,4.2vw,52px)/1.08 var(--sans);margin-block:8px 10px}
+.vframe{margin-top:22px;aspect-ratio:16/9;width:100%;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,#262a60,#161826);box-shadow:0 0 0 1px #595d6c,0 16px 40px rgba(0,0,0,.55);display:grid;place-items:center}
+.vframe iframe{width:100%;height:100%;border:0;display:block}
+.vempty{display:flex;flex-direction:column;align-items:center;gap:12px;color:var(--n-muted);text-align:center;padding:16px}
+/* Home: full-page video stage */
+.hvid{position:relative;min-height:calc(100svh - var(--hdr,150px));background:radial-gradient(120% 90% at 50% 40%,#2a2f6e 0%,#161826 62%,#0d0e16 100%);display:grid;place-items:center;overflow:hidden}
+.hvid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.playbtn{width:96px;height:96px;border-radius:50%;border:1px solid color-mix(in srgb,var(--n-text) 40%,transparent);background:color-mix(in srgb,var(--n-text) 8%,transparent);display:grid;place-items:center;color:var(--n-text);cursor:pointer;transition:transform .2s,background .2s}
+.playbtn:hover,.playbtn:focus-visible{transform:scale(1.06);background:color-mix(in srgb,var(--n-text) 16%,transparent)}
+.playbtn svg{width:34px;height:34px;margin-left:5px;fill:currentColor}
+.playbtn[disabled]{cursor:default;opacity:.55}
+.hvid .scue{position:absolute;bottom:var(--s3);left:50%;transform:translateX(-50%);width:28px;height:44px;border-radius:14px;border:1px solid color-mix(in srgb,var(--n-text) 40%,transparent)}
+.hvid .scue::after{content:"";position:absolute;top:8px;left:50%;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--n-text);animation:cue 1.8s infinite}
+@keyframes cue{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+@media (prefers-reduced-motion:reduce){.hvid .scue::after{animation:none}}
+.hvid::after,.vframe::after,.wm::after{content:"© Public Samta Press";position:absolute;right:var(--s2);bottom:var(--s2);font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--n-text);opacity:.28;pointer-events:none;z-index:2}
+.hvid::after{bottom:var(--s2);left:var(--s2);right:auto}.vframe{position:relative}.wm{position:relative;display:inline-block}
+.mdbadge{position:absolute;top:var(--s3);right:var(--s3);z-index:3;display:flex;align-items:center;gap:12px;padding:8px 16px 8px 8px;border-radius:999px;background:color-mix(in srgb,#0d0e16 70%,transparent);box-shadow:0 0 0 1px #595d6c;color:var(--n-text);text-decoration:none;max-width:calc(100% - 2*var(--s3))}
+.mdbadge .ph{flex:none;width:52px;height:52px;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:linear-gradient(160deg,#6E9BEA,#353b80);box-shadow:0 0 0 2px #D9B25A;font:600 16px var(--sans);letter-spacing:.04em}
+.mdbadge .ph img{width:100%;height:100%;object-fit:cover}
+.mdbadge b{display:block;font:600 15px/1.2 var(--sans)}
+.mdbadge small{display:block;font:500 12px/1.3 var(--sans);color:var(--n-muted)}
+.mdbadge:hover,.mdbadge:focus-visible{box-shadow:0 0 0 1px #D9B25A}
+.hvid .mdbadge~.scue{}
+@media (max-width:560px){.mdbadge{top:var(--s2);right:var(--s2);padding:6px 12px 6px 6px}.mdbadge .ph{width:40px;height:40px;font-size:13px}.mdbadge b{font-size:13px}.mdbadge small{font-size:11px}}
+.hnote{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--s5);align-items:center;padding-block:96px var(--s6)}
+.hh2{font:600 clamp(36px,5vw,64px)/1.08 var(--sans);letter-spacing:-.02em;margin:var(--s2) 0 var(--s4);color:var(--n-text)}.hh2 em{font-style:normal;color:#D9B25A}
+.hq{font:500 clamp(20px,2.2vw,28px)/1.35 var(--sans);margin:0 0 var(--s3);color:var(--n-text);border-left:3px solid #D9B25A;padding-left:var(--s3)}
+.hp{font-size:20px;line-height:1.7;color:var(--n-muted);max-width:52ch;margin:0 0 var(--s2)}
+.hs{font:600 var(--t-small) var(--sans);color:#D9B25A;margin:0 0 var(--s3)}
+.hnote .ctas{display:flex;gap:var(--s2);flex-wrap:wrap}
+.hart{position:relative}.hart img{width:100%;height:auto;display:block;border-radius:16px}
+.hplane{position:absolute;top:-28px;right:-8px;width:88px;height:88px;transform:rotate(-8deg)}
+@media (max-width:860px){.hnote{grid-template-columns:1fr;gap:var(--s4);padding-block:96px var(--s6)}.hart{max-width:480px}.hp{font-size:17px}}
+.hp b{color:var(--n-text)}
+.hq2{font-size:clamp(17px,1.6vw,21px);border-left-color:var(--n-accent-300)}
+.hsig{display:flex;align-items:center;gap:var(--s2);margin:0 0 var(--s3)}
+.hsig img{width:64px;height:64px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #D9B25A;display:block}
+.hsig .wm::after{content:none}
+.hsig .hs{margin:0;line-height:1.3}.hsig small{color:var(--n-muted);font-weight:500}
+.vstrip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s2)}
+.vcard{position:relative;aspect-ratio:16/9;border-radius:14px;padding:var(--s3);display:flex;flex-direction:column;justify-content:flex-end;gap:4px;text-decoration:none;color:var(--n-text);background:linear-gradient(160deg,#353b80,#161826);box-shadow:0 0 0 1px #595d6c;transition:transform .2s}
+.vcard:hover,.vcard:focus-visible{transform:translateY(-3px);box-shadow:0 0 0 1px #D9B25A}
+.vcard b{font:700 22px/1.15 var(--sans)}.vcard span:last-child{color:var(--n-muted);font-size:15px}
+.vplay{position:absolute;top:var(--s3);left:var(--s3);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#D9B25A;color:#161826;font-size:16px;padding-left:3px}
+.gb{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s2)}
+.gbc{padding:var(--s3);border-radius:14px;background:color-mix(in srgb,var(--n-text) 4%,transparent);box-shadow:0 0 0 1px #595d6c}
+.gbc .yr{font:700 var(--t-label) var(--sans);letter-spacing:.1em;text-transform:uppercase;color:#D9B25A}
+.gbc p{margin:var(--s1) 0 0;font-size:16px;line-height:1.5}
+.gbc .g b{color:#7fd6a0}.gbc .b b{color:#f08a8a}
+.gbc .l{font-weight:700;color:var(--n-text);margin-top:var(--s2)}
+.gbn{display:block;margin-top:var(--s2);color:var(--n-muted);font-size:13px}
+@media (max-width:760px){.vstrip,.gb{grid-template-columns:1fr}}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* About: Why we exist */
+.about{max-width:760px;padding-block:var(--s5) var(--s4)}
+.about h1{font:500 clamp(32px,4.2vw,52px)/1.08 var(--sans);margin-block:var(--s1) var(--s2)}
+.about .sig{font:500 var(--t-small) var(--sans);color:var(--n-muted);margin-top:var(--s2)}
+.about h2{font:500 var(--t-h2)/1.2 var(--sans);margin-block:var(--s5) var(--s2)}
+.about p{font-size:18px;line-height:1.7;margin-block:0 var(--s2)}
+.blist{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
+.blist li{padding:var(--s2) var(--s3);border-left:3px solid var(--n-accent-300);background:color-mix(in srgb,var(--n-text) 4%,transparent);border-radius:0 10px 10px 0;font-size:17px;line-height:1.6}
+.blist b{color:var(--n-text);font-weight:600}
+.quote{font:500 clamp(22px,2.6vw,30px)/1.35 var(--sans);border-left:3px solid #D9B25A;padding-left:var(--s3);margin-block:var(--s4)}
+.why3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s2);margin-block:var(--s3) var(--s4)}
+.why3 div{padding:var(--s3);border-radius:14px;background:color-mix(in srgb,var(--n-text) 5%,transparent);box-shadow:0 0 0 1px #595d6c}
+.why3 b{display:block;font:500 var(--t-h3)/1.25 var(--sans);margin-bottom:var(--s1)}
+.why3 span{font-size:15px;line-height:1.55;color:var(--n-muted)}
+@media (max-width:760px){.why3{grid-template-columns:1fr}.about p{font-size:17px}}
+.vempty svg{width:min(120px,30vw);height:auto}
+.adslot{margin-block:20px;min-height:90px;border:1px dashed var(--n-divider);border-radius:8px;display:grid;place-items:center}
+.adslot[hidden]{display:none}
+/* ===== Blueprint scale: spacing 8 / 16 / 24 / 40 / 64 / 96 ; type 12 / 14 / 16 / 20 / 28 / 40 / 52 ===== */
+:root{--s1:8px;--s2:16px;--s3:24px;--s4:40px;--s5:64px;--s6:96px;--t-label:12px;--t-small:14px;--t-body:16px;--t-h3:20px;--t-h2:28px;--t-h1:40px;--t-display:52px}
+.row{padding-block:var(--s5)}
+.head{margin-bottom:var(--s3)}
+.head h2,.pblock h2{font-size:var(--t-h2)!important;font-weight:500!important;line-height:1.15}
+.pblock h2{font-size:var(--t-h3)!important}
+.hero{padding-block:var(--s5);gap:var(--s4)}
+.hero h1{font-size:clamp(36px,5vw,var(--t-display))!important;margin-block:var(--s2) var(--s3)}
+.art h1,.formpage h1,.vhero h1,section.page h1{font-size:clamp(30px,4vw,var(--t-h1))}
+.story h3,.law-item h3,.person h3{font-size:var(--t-h3)!important}
+.dek{font-size:18px;margin-bottom:var(--s2)}
+.label{font-size:var(--t-label)}
+.law-item{padding-block:var(--s3)}
+.pgrid{gap:var(--s3)}
+.pblock{padding:var(--s3)}
+.band .wrap,.join .wrap{padding-block:var(--s5)}
+footer.site .wrap{padding-block:var(--s5) var(--s4)}
+.slider{padding-block:var(--s5);border-bottom:1px solid var(--n-divider)}
+.slider .head{display:flex;justify-content:space-between;align-items:center}
+.sbtns{display:flex;gap:var(--s1)}
+.sbtn{width:44px;height:44px;border-radius:50%;border:1px solid var(--n-divider);background:transparent;color:var(--n-text);font-size:18px;cursor:pointer}
+.sbtn:hover{border-color:var(--n-accent);color:var(--n-accent)}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:min(360px,82%);gap:var(--s2);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:var(--s1)}
+.track::-webkit-scrollbar{display:none}
+.slide{scroll-snap-align:start;position:relative;overflow:hidden;min-height:240px;border-radius:14px;padding:var(--s3);display:flex;flex-direction:column;gap:var(--s1);text-decoration:none;background:linear-gradient(160deg,#262a60,#1c1f3a);box-shadow:0 0 0 1px #3f424d;transition:transform .2s,box-shadow .2s}
+.slide:hover{transform:translateY(-3px);box-shadow:0 0 0 1px var(--n-accent),0 16px 40px rgba(0,0,0,.5);color:inherit}
+.slide .kick,.pop .kick{font:600 var(--t-label)/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#D9B25A}
+.slide .st{font:500 var(--t-h2)/1.15 var(--sans);color:var(--n-text);margin-top:var(--s1)}
+.slide .sd{font-size:15px;color:var(--n-muted);max-width:30ch}
+.slide .go,.pop .go{margin-top:auto;font:500 var(--t-small) var(--sans);color:var(--n-accent);text-decoration:none}
+.sart{position:absolute;right:-18px;bottom:-18px;width:120px;height:120px;opacity:.25;--lb:#6E9BEA;--lp:#1c1f3a;--lg:#D9B25A;--lk:#e9e9ed}
+.dots2{display:flex;gap:6px;justify-content:center;margin-top:var(--s2)}
+.dots2 i{width:8px;height:8px;border-radius:50%;background:var(--n-divider)}
+.dots2 i.on{background:var(--n-accent)}
+.pop{position:fixed;right:var(--s2);bottom:var(--s2);z-index:40;width:min(300px,calc(100vw - 32px));background:var(--n-surface);border-radius:14px;padding:var(--s3);box-shadow:0 0 0 1px #9397ab,0 16px 40px rgba(0,0,0,.65);display:flex;flex-direction:column;gap:6px;opacity:0;transform:translateY(12px);transition:opacity .3s,transform .3s}
+.pop.in{opacity:1;transform:none}
+.pop[hidden]{display:none}
+.pop b{font:500 var(--t-h3) var(--sans);color:var(--n-text)}
+.pop span{font-size:var(--t-small);color:var(--n-muted)}
+.pop-x{position:absolute;top:8px;right:10px;width:32px;height:32px;border:0;background:transparent;color:var(--n-muted);font-size:22px;cursor:pointer}
+@media (max-width:760px){.row,.slider{padding-block:var(--s4)}.hero{padding-block:var(--s4)}.band .wrap,.join .wrap{padding-block:var(--s4)}}
+@media (prefers-reduced-motion:reduce){.slide,.pop{transition:none}}
+@media (max-width:760px){.pop{left:var(--s2);right:var(--s2);width:auto;padding:var(--s2);gap:4px}.pop b{font-size:18px}}
+.pgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding-bottom:30px}
+.pblock{background:var(--n-surface);border-radius:8px;padding:18px 20px}
+.pblock h2{font:600 18px/1.3 var(--sans);color:var(--n-accent-300);margin-bottom:8px}
+.pblock ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:15.5px;color:var(--n-muted)}
+.pblock b{color:var(--n-text);font-weight:600}
+@media (max-width:760px){.pgrid{grid-template-columns:1fr}}
+.join{background:var(--n-surface);margin-top:10px}
+.join .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center;padding-block:30px}
+.join img{width:100%;height:auto;border-radius:14px}.joinart{aspect-ratio:16/10;border-radius:14px;background:linear-gradient(160deg,#262a60,#161826);display:grid;place-items:center}.joinart svg{width:40%;height:auto;--lb:#6E9BEA;--lp:#161826;--lg:#D9B25A}
+.join h2{font:500 28px/1.15 var(--sans);margin-block:8px 8px}
+.join p{color:var(--n-muted);margin-bottom:16px}
+@media (max-width:760px){.join .wrap{grid-template-columns:1fr}}
+.law-item .num{color:var(--n-accent)}
+.law-item .case{color:var(--n-text)}
+th{border-bottom-color:var(--n-divider)}
+@media (max-width:760px){table{min-width:0}td,th{padding-right:8px}}
+</style>
+</head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="voice" viewBox="0 0 120 120"><g transform="translate(40 80) rotate(24) scale(1.05)"><path style="fill:var(--lg)" d="M-13 -6 H13 V6 C13 17 6 27 0 41 C-6 27 -13 17 -13 6 Z"/><path style="stroke:var(--lp)" d="M-13 5 H13" stroke-width="2"/><path style="stroke:var(--lp)" d="M0 39 V19" stroke-width="2" stroke-linecap="round"/><circle style="fill:var(--lp)" cx="0" cy="17" r="3.4"/></g><rect style="fill:var(--lb)" x="6" y="8" width="108" height="74" rx="26"/><rect style="fill:var(--lp)" x="22" y="31" width="28" height="8" rx="3"/><rect style="fill:var(--lp)" x="22" y="49" width="28" height="8" rx="3"/><circle style="fill:var(--lg)" cx="60" cy="44" r="3.6"/><circle style="fill:var(--lg)" cx="70" cy="44" r="3.6"/><circle style="fill:var(--lg)" cx="80" cy="44" r="3.6"/><path style="stroke:var(--lg)" d="M88 31 L100 44 L88 57" fill="none" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="plane" viewBox="0 0 120 120"><path style="stroke:var(--lk)" d="M10 108 Q26 98 44 86" fill="none" stroke-width="2" stroke-linecap="round"/><circle style="fill:var(--lk)" cx="9" cy="109" r="4.6"/><circle style="fill:var(--lg)" cx="18" cy="103" r="3.4"/><circle style="fill:var(--lg)" cx="27" cy="97.2" r="3.4"/><circle style="fill:var(--lg)" cx="36" cy="91.4" r="3.4"/><path style="fill:var(--lb);stroke:var(--lp)" d="M114 8 L4 50 L52 66 Z" stroke-width="2.6" stroke-linejoin="round"/><path style="fill:var(--lb);stroke:var(--lp)" d="M52 66 L48 96 L70 82 Z" stroke-width="2.6" stroke-linejoin="round" opacity=".75"/><path style="fill:var(--lk);stroke:var(--lp)" d="M114 8 L52 66 L70 82 Z" stroke-width="2.6" stroke-linejoin="round"/><path style="fill:var(--lb);stroke:var(--lp)" d="M114 8 L70 82 L84 110 Z" stroke-width="2.6" stroke-linejoin="round"/><path style="fill:var(--lg);stroke:var(--lp)" d="M114 8 L92.0 16.4 L91.68 28.88 L108.0 28.4 Z" stroke-width="2.6" stroke-linejoin="round"/><path style="stroke:var(--lp)" d="M112.14 9.74 L98.5 22.5" stroke-width="2" stroke-linecap="round"/><circle style="fill:var(--lp)" cx="98.5" cy="22.5" r="3"/></symbol>
+    <symbol id="logo" viewBox="0 0 424 132"><g transform="translate(0 6)"><path d="M10 108 Q26 98 44 86" fill="none" style="stroke:var(--lk)" stroke-width="2" stroke-linecap="round"/> <circle cx="9" cy="109" r="4.6" style="fill:var(--lk)"/> <circle cx="18" cy="103" r="3.4" style="fill:var(--lg)"/><circle cx="27" cy="97.2" r="3.4" style="fill:var(--lg)"/><circle cx="36" cy="91.4" r="3.4" style="fill:var(--lg)"/> <path d="M114 8 L4 50 L52 66 Z" style="fill:var(--lb);stroke:var(--lp)" stroke-width="2.6" stroke-linejoin="round"/> <path d="M52 66 L48 96 L70 82 Z" style="fill:var(--lb);stroke:var(--lp)" stroke-width="2.6" stroke-linejoin="round" opacity=".75"/> <path d="M114 8 L52 66 L70 82 Z" style="fill:var(--lk);stroke:var(--lp)" stroke-width="2.6" stroke-linejoin="round"/> <path d="M114 8 L70 82 L84 110 Z" style="fill:var(--lb);stroke:var(--lp)" stroke-width="2.6" stroke-linejoin="round"/> <path d="M114 8 L92.0 16.4 L91.68 28.88 L108.0 28.4 Z" style="fill:var(--lg);stroke:var(--lp)" stroke-width="2.6" stroke-linejoin="round"/><path d="M112.14 9.74 L98.5 22.5" style="stroke:var(--lp)" stroke-width="2" stroke-linecap="round"/><circle cx="98.5" cy="22.5" r="3" style="fill:var(--lp)"/></g><path d="M124.85 56.0V29.894000000000002H139.214Q141.874 29.894000000000002 143.755 30.977000000000004Q145.636 32.06 146.643 33.979Q147.65 35.897999999999996 147.65 38.482Q147.65 41.142 146.60500000000002 43.08Q145.56 45.018 143.64100000000002 46.101Q141.722 47.184 139.062 47.184H131.652V56.0ZM131.652 41.94H137.466Q139.062 41.94 139.89800000000002 41.047Q140.734 40.153999999999996 140.734 38.558Q140.734 37.418 140.373 36.696Q140.012 35.974000000000004 139.29 35.575Q138.56799999999998 35.176 137.466 35.176H131.652ZM162.982 56.456Q159.22 56.456 156.503 55.278000000000006Q153.786 54.1 152.34199999999998 51.744Q150.898 49.388 150.898 45.891999999999996V29.894000000000002H157.738V45.74Q157.738 48.248 159.06799999999998 49.692Q160.398 51.136 162.982 51.136Q165.566 51.136 166.934 49.692Q168.302 48.248 168.302 45.74V29.894000000000002H175.10399999999998V45.891999999999996Q175.10399999999998 49.388 173.66 51.744Q172.216 54.1 169.518 55.278000000000006Q166.82 56.456 162.982 56.456ZM180.328 56.0V29.894000000000002H196.288Q198.30200000000002 29.894000000000002 199.936 30.692Q201.57 31.490000000000002 202.539 32.934Q203.508 34.378 203.508 36.316Q203.508 38.025999999999996 202.919 39.242Q202.33 40.458 201.361 41.218Q200.392 41.978 199.17600000000002 42.358000000000004V42.51Q200.582 42.814 201.722 43.593Q202.86200000000002 44.372 203.52700000000002 45.702Q204.192 47.032 204.192 48.932Q204.192 51.174 203.12800000000001 52.751000000000005Q202.06400000000002 54.328 200.31600000000003 55.164Q198.568 56.0 196.40200000000002 56.0ZM187.13 50.756H194.54000000000002Q195.756 50.756 196.497 50.034Q197.238 49.312 197.238 47.83Q197.238 47.032 196.91500000000002 46.405Q196.592 45.778 195.96500000000003 45.436Q195.33800000000002 45.094 194.42600000000002 45.094H187.13ZM187.13 40.268H193.93200000000002Q194.768 40.268 195.357 39.926Q195.946 39.584 196.269 38.976Q196.592 38.368 196.592 37.532Q196.592 36.316 195.87 35.632000000000005Q195.148 34.948 194.046 34.948H187.13ZM208.238 56.0V29.894000000000002H215.04V50.414H228.302V56.0ZM231.512 56.0V29.894000000000002H238.314V56.0ZM255.622 56.456Q251.404 56.456 248.459 54.993Q245.514 53.53 243.99400000000003 50.528Q242.47400000000002 47.525999999999996 242.47400000000002 42.928Q242.47400000000002 36.164 245.875 32.801Q249.276 29.438000000000002 255.622 29.438000000000002Q259.156 29.438000000000002 261.892 30.635Q264.628 31.832 266.16700000000003 34.207Q267.706 36.582 267.706 40.116H261.056Q261.056 38.444 260.39099999999996 37.247Q259.726 36.05 258.529 35.403999999999996Q257.332 34.757999999999996 255.622 34.757999999999996Q253.494 34.757999999999996 252.126 35.632Q250.758 36.506 250.11200000000002 38.14Q249.466 39.774 249.466 42.092V43.802Q249.466 46.120000000000005 250.11200000000002 47.773Q250.758 49.426 252.10700000000003 50.281000000000006Q253.45600000000002 51.136 255.584 51.136Q257.408 51.136 258.68100000000004 50.528000000000006Q259.954 49.92 260.619 48.723Q261.284 47.525999999999996 261.284 45.854H267.706Q267.706 49.388 266.20500000000004 51.744Q264.704 54.1 261.98699999999997 55.278000000000006Q259.27 56.456 255.622 56.456ZM289.402 56.456Q286.93199999999996 56.456 284.76599999999996 56.019000000000005Q282.59999999999997 55.582 280.947 54.594Q279.294 53.606 278.344 51.991Q277.394 50.376 277.394 48.02Q277.394 47.868 277.394 47.678Q277.394 47.488 277.43199999999996 47.374H284.006Q284.006 47.488 283.98699999999997 47.659Q283.96799999999996 47.83 283.96799999999996 47.944Q283.96799999999996 49.16 284.59499999999997 49.900999999999996Q285.222 50.642 286.36199999999997 50.965Q287.50199999999995 51.288 289.022 51.288Q289.858 51.288 290.58 51.212Q291.30199999999996 51.136 291.87199999999996 50.946Q292.442 50.756 292.879 50.471000000000004Q293.316 50.186 293.525 49.787Q293.734 49.388 293.734 48.856Q293.734 47.982 293.06899999999996 47.412Q292.404 46.842 291.283 46.462Q290.162 46.082 288.756 45.739999999999995Q287.34999999999997 45.397999999999996 285.83 45.018Q284.31 44.638 282.904 44.068Q281.498 43.498000000000005 280.37699999999995 42.624Q279.256 41.75 278.591 40.439Q277.926 39.128 277.926 37.266000000000005Q277.926 35.214 278.79999999999995 33.713Q279.674 32.212 281.21299999999997 31.262Q282.75199999999995 30.312 284.76599999999996 29.875Q286.78 29.438000000000002 289.06 29.438000000000002Q291.30199999999996 29.438000000000002 293.259 29.894000000000002Q295.216 30.35 296.736 31.319Q298.256 32.288 299.111 33.751Q299.966 35.214 300.00399999999996 37.266000000000005V37.722H293.46799999999996V37.456Q293.46799999999996 36.582 292.99299999999994 35.917Q292.518 35.251999999999995 291.568 34.852999999999994Q290.618 34.454 289.212 34.454Q287.806 34.454 286.837 34.72Q285.868 34.986000000000004 285.355 35.480000000000004Q284.842 35.974000000000004 284.842 36.658Q284.842 37.494 285.50699999999995 38.025999999999996Q286.17199999999997 38.558 287.312 38.938Q288.452 39.318 289.85799999999995 39.641Q291.26399999999995 39.964 292.765 40.325Q294.26599999999996 40.686 295.67199999999997 41.236999999999995Q297.078 41.788 298.21799999999996 42.643Q299.358 43.498000000000005 300.023 44.752Q300.688 46.006 300.688 47.792Q300.688 50.908 299.225 52.808Q297.762 54.708 295.197 55.582Q292.632 56.456 289.402 56.456ZM302.11199999999997 56.0 311.916 29.894000000000002H320.086L329.89 56.0H322.632L321.074 51.478H310.662L309.104 56.0ZM312.296 46.386H319.402L317.53999999999996 40.876000000000005Q317.388 40.458 317.179 39.831Q316.96999999999997 39.204 316.76099999999997 38.501000000000005Q316.552 37.798 316.36199999999997 37.076Q316.17199999999997 36.354 315.98199999999997 35.822H315.716Q315.56399999999996 36.544 315.279 37.456Q314.99399999999997 38.368 314.70899999999995 39.28Q314.424 40.192 314.19599999999997 40.876000000000005ZM332.606 56.0V29.894000000000002H342.52399999999994L345.678 41.522Q345.868 42.13 346.134 43.175Q346.4 44.22 346.66599999999994 45.36Q346.93199999999996 46.5 347.12199999999996 47.412H347.426Q347.578 46.69 347.806 45.683Q348.034 44.676 348.29999999999995 43.555Q348.566 42.434 348.794 41.484L351.986 29.894000000000002H361.638V56.0H355.02599999999995V44.866Q355.02599999999995 43.232 355.04499999999996 41.56Q355.06399999999996 39.888000000000005 355.102 38.52Q355.14 37.152 355.14 36.544H354.83599999999996Q354.722 37.114000000000004 354.47499999999997 38.197Q354.22799999999995 39.28 353.943 40.439Q353.65799999999996 41.598 353.42999999999995 42.434L349.63 56.0H344.15799999999996L340.32 42.434Q340.13 41.674 339.864 40.61Q339.59799999999996 39.546 339.351 38.444Q339.104 37.342 338.914 36.582H338.60999999999996Q338.64799999999997 37.57 338.686 38.995000000000005Q338.724 40.42 338.76199999999994 41.959Q338.79999999999995 43.498000000000005 338.79999999999995 44.866V56.0ZM373.474 56.0V35.480000000000004H364.99999999999994V29.894000000000002H388.74999999999994V35.480000000000004H380.27599999999995V56.0ZM389.64199999999994 56.0 399.44599999999997 29.894000000000002H407.616L417.41999999999996 56.0H410.162L408.604 51.478H398.19199999999995L396.63399999999996 56.0ZM399.82599999999996 46.386H406.93199999999996L405.06999999999994 40.876000000000005Q404.91799999999995 40.458 404.70899999999995 39.831Q404.49999999999994 39.204 404.29099999999994 38.501000000000005Q404.082 37.798 403.89199999999994 37.076Q403.70199999999994 36.354 403.51199999999994 35.822H403.246Q403.09399999999994 36.544 402.80899999999997 37.456Q402.52399999999994 38.368 402.2389999999999 39.28Q401.95399999999995 40.192 401.72599999999994 40.876000000000005Z" style="fill:var(--lk)"/><rect x="122" y="66" width="127.0" height="30" style="fill:var(--lb)"/><path d="M132.8 89.0V72.512H141.872Q143.552 72.512 144.74 73.196Q145.928 73.88 146.564 75.092Q147.2 76.304 147.2 77.936Q147.2 79.616 146.54 80.84Q145.88 82.064 144.668 82.74799999999999Q143.456 83.432 141.776 83.432H137.096V89.0ZM137.096 80.12H140.768Q141.776 80.12 142.304 79.55600000000001Q142.832 78.992 142.832 77.984Q142.832 77.264 142.60399999999998 76.80799999999999Q142.376 76.352 141.92000000000002 76.1Q141.464 75.848 140.768 75.848H137.096ZM155.55200000000002 89.0V72.512H165.12800000000001Q166.952 72.512 168.176 73.196Q169.4 73.88 170.012 75.068Q170.62400000000002 76.256 170.62400000000002 77.72Q170.62400000000002 79.304 169.892 80.53999999999999Q169.16 81.776 167.84 82.472L171.15200000000002 89.0H166.352L163.616 83.19200000000001H159.848V89.0ZM159.848 80.0H164.288Q165.17600000000002 80.0 165.716 79.412Q166.256 78.824 166.256 77.84Q166.256 77.19200000000001 166.01600000000002 76.736Q165.776 76.28 165.344 76.02799999999999Q164.912 75.776 164.288 75.776H159.848ZM179.60000000000002 89.0V72.512H193.208V75.872H183.89600000000002V78.968H192.032V82.256H183.89600000000002V85.64H193.376V89.0ZM209.168 89.288Q207.60800000000003 89.288 206.24 89.012Q204.872 88.736 203.82800000000003 88.112Q202.78400000000002 87.488 202.18400000000003 86.46799999999999Q201.58400000000003 85.448 201.58400000000003 83.96Q201.58400000000003 83.864 201.58400000000003 83.744Q201.58400000000003 83.624 201.60800000000003 83.55199999999999H205.76000000000002Q205.76000000000002 83.624 205.74800000000002 83.732Q205.73600000000002 83.84 205.73600000000002 83.912Q205.73600000000002 84.68 206.132 85.148Q206.52800000000002 85.616 207.24800000000002 85.82Q207.96800000000002 86.024 208.92800000000003 86.024Q209.45600000000002 86.024 209.91200000000003 85.976Q210.36800000000002 85.928 210.728 85.80799999999999Q211.08800000000002 85.688 211.36400000000003 85.50800000000001Q211.64000000000001 85.328 211.77200000000002 85.076Q211.90400000000002 84.824 211.90400000000002 84.488Q211.90400000000002 83.936 211.48400000000004 83.576Q211.06400000000002 83.216 210.35600000000002 82.976Q209.64800000000002 82.736 208.76000000000002 82.52000000000001Q207.872 82.304 206.91200000000003 82.064Q205.95200000000003 81.824 205.06400000000002 81.464Q204.17600000000002 81.104 203.46800000000002 80.55199999999999Q202.76000000000002 80.0 202.34000000000003 79.172Q201.92000000000002 78.344 201.92000000000002 77.168Q201.92000000000002 75.872 202.47200000000004 74.924Q203.02400000000003 73.976 203.99600000000004 73.376Q204.96800000000002 72.776 206.24 72.5Q207.51200000000003 72.224 208.95200000000003 72.224Q210.36800000000002 72.224 211.60400000000004 72.512Q212.84000000000003 72.8 213.8 73.412Q214.76000000000002 74.024 215.3 74.94800000000001Q215.84000000000003 75.872 215.86400000000003 77.168V77.456H211.73600000000002V77.288Q211.73600000000002 76.736 211.43600000000004 76.316Q211.13600000000002 75.896 210.536 75.644Q209.936 75.392 209.04800000000003 75.392Q208.16000000000003 75.392 207.548 75.56Q206.936 75.728 206.61200000000002 76.03999999999999Q206.288 76.352 206.288 76.78399999999999Q206.288 77.312 206.70800000000003 77.648Q207.12800000000001 77.984 207.848 78.22399999999999Q208.568 78.464 209.45600000000002 78.668Q210.34400000000002 78.872 211.29200000000003 79.1Q212.24 79.328 213.12800000000001 79.676Q214.01600000000002 80.024 214.73600000000002 80.564Q215.45600000000002 81.104 215.87600000000003 81.896Q216.29600000000002 82.688 216.29600000000002 83.816Q216.29600000000002 85.784 215.372 86.98400000000001Q214.448 88.184 212.82800000000003 88.73599999999999Q211.20800000000003 89.288 209.168 89.288ZM231.89600000000002 89.288Q230.33600000000004 89.288 228.96800000000002 89.012Q227.60000000000002 88.736 226.55600000000004 88.112Q225.51200000000003 87.488 224.91200000000003 86.46799999999999Q224.31200000000004 85.448 224.31200000000004 83.96Q224.31200000000004 83.864 224.31200000000004 83.744Q224.31200000000004 83.624 224.33600000000004 83.55199999999999H228.48800000000003Q228.48800000000003 83.624 228.47600000000003 83.732Q228.46400000000003 83.84 228.46400000000003 83.912Q228.46400000000003 84.68 228.86 85.148Q229.25600000000003 85.616 229.97600000000003 85.82Q230.69600000000003 86.024 231.65600000000003 86.024Q232.18400000000003 86.024 232.64000000000004 85.976Q233.09600000000003 85.928 233.45600000000002 85.80799999999999Q233.81600000000003 85.688 234.09200000000004 85.50800000000001Q234.36800000000002 85.328 234.50000000000003 85.076Q234.63200000000003 84.824 234.63200000000003 84.488Q234.63200000000003 83.936 234.21200000000005 83.576Q233.79200000000003 83.216 233.08400000000003 82.976Q232.37600000000003 82.736 231.48800000000003 82.52000000000001Q230.60000000000002 82.304 229.64000000000004 82.064Q228.68000000000004 81.824 227.79200000000003 81.464Q226.90400000000002 81.104 226.19600000000003 80.55199999999999Q225.48800000000003 80.0 225.06800000000004 79.172Q224.64800000000002 78.344 224.64800000000002 77.168Q224.64800000000002 75.872 225.20000000000005 74.924Q225.75200000000004 73.976 226.72400000000005 73.376Q227.69600000000003 72.776 228.96800000000002 72.5Q230.24000000000004 72.224 231.68000000000004 72.224Q233.09600000000003 72.224 234.33200000000005 72.512Q235.56800000000004 72.8 236.52800000000002 73.412Q237.48800000000003 74.024 238.02800000000002 74.94800000000001Q238.56800000000004 75.872 238.59200000000004 77.168V77.456H234.46400000000003V77.288Q234.46400000000003 76.736 234.16400000000004 76.316Q233.86400000000003 75.896 233.264 75.644Q232.66400000000002 75.392 231.77600000000004 75.392Q230.88800000000003 75.392 230.276 75.56Q229.66400000000002 75.728 229.34000000000003 76.03999999999999Q229.01600000000002 76.352 229.01600000000002 76.78399999999999Q229.01600000000002 77.312 229.43600000000004 77.648Q229.85600000000002 77.984 230.57600000000002 78.22399999999999Q231.29600000000002 78.464 232.18400000000003 78.668Q233.07200000000003 78.872 234.02000000000004 79.1Q234.96800000000002 79.328 235.85600000000002 79.676Q236.74400000000003 80.024 237.46400000000003 80.564Q238.18400000000003 81.104 238.60400000000004 81.896Q239.02400000000003 82.688 239.02400000000003 83.816Q239.02400000000003 85.784 238.10000000000002 86.98400000000001Q237.17600000000002 88.184 235.55600000000004 88.73599999999999Q233.93600000000004 89.288 231.89600000000002 89.288Z" style="fill:var(--lp)"/> </symbol>
+    <symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></symbol>
+  </defs>
+</svg>
+
+
+<header class="site" id="top">
+  <div class="util"><div class="wrap">
+    <div class="l"><span id="today"></span><span class="promise"><span class="dots" aria-hidden="true"><b></b><b></b><b></b></span><span data-i18n="promise">No name needed. Three reviewers approve every article.</span></span></div>
+    <div class="r"><a href="#track" data-i18n="track">Follow up on your story</a><a href="#footer">Grievance officer</a>
+      <div class="lang" role="group" aria-label="Language"><button type="button" id="lang-en" data-lang="en" aria-pressed="true">English</button><button type="button" id="lang-kn" data-lang="kn" aria-pressed="false">ಕನ್ನಡ</button></div>
+    </div>
+  </div></div>
+  <div class="mast"><div class="wrap">
+    <a href="#home" aria-label="Public Samta Press, home"><svg class="logo" viewBox="0 0 424 132" role="img" aria-label="Public Samta Press"><use href="#logo"/></svg></a>
+    <div class="mid"><span class="tag" data-i18n="tag">Care · Compassion · Courage</span><small data-i18n="mission">The people's press, carried to the office that must answer</small></div>
+    <div class="act">
+            <a class="cta" href="#submit"><svg class="voice" aria-hidden="true"><use href="#voice"/></svg><span data-i18n="submit">Submit a letter</span></a>
+      <button type="button" class="icon-btn m-only" id="menu-open" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><svg><use href="#menu"/></svg></button>
+    </div>
+  </div></div>
+  <div class="m-tag m-only"><div class="wrap"><span class="tag" data-i18n="tag">Care · Compassion · Courage</span>
+    <div class="lang" role="group" aria-label="Language"><button type="button" id="lang-en-m" data-lang="en" aria-pressed="true">EN</button><button type="button" id="lang-kn-m" data-lang="kn" aria-pressed="false">ಕ</button></div></div></div>
+  <nav class="beats" aria-label="Sections"><div class="wrap"><ul>
+    <li><a href="#home" data-i18n="n0">Home</a></li>
+    <li><a href="#about" data-i18n="n6">Why we exist</a></li>
+    <li><a href="#submit" data-i18n="n7">Submit a letter</a></li>
+    <li><a href="#story" data-i18n="n1">Articles</a></li>
+    <li><a href="#support">Support</a></li>
+    <li><a href="#track" data-i18n="n2">Follow up</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#rights" data-i18n="n3">Know your rights</a></li>
+    <li><a href="#laws">Laws library</a></li>
+    <li><a href="#verify" data-i18n="n4">How we verify</a></li>
+    <li class="push"><a href="#privacy">Privacy</a></li>
+  </ul></div></nav>
+</header>
+
+<aside class="pop" id="pop" hidden aria-label="New on PSP">
+  <button type="button" class="pop-x" id="pop-x" aria-label="Close">×</button>
+  <span class="kick">New</span>
+  <b>Laws library</b>
+  <span>India, Asia and the world, in plain words.</span>
+  <a href="#laws" class="go">Open the library →</a>
+</aside>
+<div class="drawer" id="drawer" hidden>
+  <div class="top"><svg class="logo" viewBox="0 0 424 132" role="img" aria-label="Public Samta Press"><use href="#logo"/></svg><button type="button" class="icon-btn" id="menu-close" aria-label="Close menu"><svg><use href="#close"/></svg></button></div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">Why we exist</a></li>
+    <li><a href="#submit">Submit a letter to be solved</a></li>
+    <li><a href="#story">Articles</a></li>
+    <li><a href="#support">Support and advertise</a></li>
+    <li><a href="#track">Follow up on your story</a></li>
+    <li><a href="#rights">Know your rights</a></li>
+    <li><a href="#laws">Laws library</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#verify">How we verify</a></li>
+    <li><a href="#privacy">Privacy and disclaimer</a></li>
+  </ul>
+  <div class="box"><span class="label">Write to the desk</span><a href="mailto:desk@samtapress.in">desk@samtapress.in</a></div>
+  <div class="fine"><span>Grievance officer: grievance@samtapress.in</span><span class="tag" style="font-size:10px">Care · Compassion · Courage</span><span class="pledge-m" data-i18n="pledge">Equal respect for every person, whatever their caste, income or status.</span></div>
+</div>
+
+<main id="main">
+
+<!-- HOME -->
+<section class="page" id="p-home" data-page="home">
+  <h1 class="sr">Public Samta Press</h1>
+  <div class="hvid" id="hvid">
+    <!-- MD badge: replace the initials with <img src="md-photo.jpg" alt=""> and the name only after the MD confirms both. -->
+    <a class="mdbadge" href="#about" aria-label="AB, Managing Director and Chief Editor, read why we exist"><span class="ph" aria-hidden="true"><img src="md-ab.jpg" alt="" width="52" height="52"></span><span><b>AB</b><small>Managing Director and Chief Editor</small></span></a>
+    <div class="hnote wrap">
+      <div class="htext">
+        <span class="label blue">A note from the Office of the MD</span>
+        <p class="hh2">Privacy is not a joke.<br><em>Knowledge is power.</em></p>
+        <p class="hq">“If you want to be a hero for one, in return you are a villain for one.”</p>
+        <p class="hq hq2"><b>Tired decisions bring regret. One goal never tires you. Let logic lead the mind, and know the law.</b></p>
+        <p class="hp"><b>Write without fear.</b> No name. Three checks. We carry it to the office that must answer.</p>
+        <div class="hsig"><span class="wm"><img src="md-ab.jpg" alt="AB, Managing Director and Chief Editor" width="64" height="64"></span><p class="hs">AB<br><small>Managing Director and Chief Editor</small></p></div>
+        <div class="ctas"><a class="cta" href="#submit"><svg class="voice" aria-hidden="true"><use href="#voice"/></svg>Submit a letter</a><a class="btn" href="#about">Why we exist</a></div>
+      </div>
+      <div class="hart"><img src="join-people.svg" alt="People of all ages gathered together around a laptop" width="800" height="520"><svg class="hplane" viewBox="0 0 120 120" aria-hidden="true"><use href="#plane"/></svg></div>
+    </div>
+    <span class="scue" aria-hidden="true"></span>
+  </div>
+  <div class="wrap">
+    <section class="row" aria-label="Watch">
+      <div class="head"><h2>Watch: 2-minute videos</h2><a href="#videos">All videos →</a></div>
+      <div class="vstrip">
+        <a class="vcard" href="#videos"><span class="vplay" aria-hidden="true">▶</span><b>Lost money online?</b><span>Call 1930. Act fast.</span></a>
+        <a class="vcard" href="#videos"><span class="vplay" aria-hidden="true">▶</span><b>Paid but no bill?</b><span>Your right to a GST invoice.</span></a>
+        <a class="vcard" href="#videos"><span class="vplay" aria-hidden="true">▶</span><b>Constitution and AI</b><span>Where the line is drawn.</span></a>
+      </div>
+    </section>
+    <section class="row" aria-label="Good and bad: lessons we forget">
+      <div class="head"><h2>Good and bad: lessons we forget</h2></div>
+      <div class="gb">
+        <div class="gbc"><span class="yr">COVID-19 · 2020 to 2022</span><p class="g"><b>Good:</b> free ration and free vaccines for crores of people.</p><p class="b"><b>Bad:</b> migrant workers walked home after a sudden lockdown. Oxygen ran short in 2021.</p><p class="l">Lesson: plans must reach the poorest first.</p></div>
+        <div class="gbc"><span class="yr">Sewer deaths · still today</span><p class="g"><b>Good:</b> manual scavenging banned by law in 2013. Supreme Court ordered higher compensation in 2023.</p><p class="b"><b>Bad:</b> workers are still sent into sewers by hand.</p><p class="l">Lesson: a law on paper is not enough.</p></div>
+        <div class="gbc"><span class="yr">Online fraud · 2024 onwards</span><p class="g"><b>Good:</b> 1930 helpline and a national cybercrime portal.</p><p class="b"><b>Bad:</b> "digital arrest" calls that fake the police to steal savings.</p><p class="l">Lesson: no real officer arrests you on a video call.</p></div>
+        <div class="gbc"><span class="yr">Right to Information · since 2005</span><p class="g"><b>Good:</b> any citizen can ask any public office, with a reply due in 30 days.</p><p class="b"><b>Bad:</b> appeals pile up when information commission posts stay empty.</p><p class="l">Lesson: use it, or lose it.</p></div>
+      </div>
+      <small class="gbn">General information from public records. Pending panel lawyer review.</small>
+    </section>
+    <section class="slider" aria-roledescription="carousel" aria-label="Explore PSP">
+      <div class="head"><h2>Explore PSP</h2><div class="sbtns"><button type="button" class="sbtn" data-dir="-1" aria-label="Previous">←</button><button type="button" class="sbtn" data-dir="1" aria-label="Next">→</button></div></div>
+      <div class="track" id="track"><a class="slide" href="#submit" role="group" aria-roledescription="slide" aria-label="1 of 4: Submit a letter"><span class="kick">Write</span><span class="st">Submit a letter to be solved</span><span class="sd">No name, no login. Three reviewers approve it, then we carry it to the office that must answer.</span><span class="go">Open →</span><svg class="sart" aria-hidden="true" viewBox="0 0 120 120"><use href="#voice"/></svg></a><a class="slide" href="#rights" role="group" aria-roledescription="slide" aria-label="2 of 4: Know your rights"><span class="kick">Know</span><span class="st">Know your rights</span><span class="sd">Free speech, privacy, RTI in 30 days, and how a court can make an office act.</span><span class="go">Open →</span><svg class="sart" aria-hidden="true" viewBox="0 0 120 120"><use href="#plane"/></svg></a><a class="slide" href="#laws" role="group" aria-roledescription="slide" aria-label="3 of 4: Laws library"><span class="kick">Learn</span><span class="st">Laws library</span><span class="sd">India first: BNS, BNSS, data, property and corporate law, then Asia and the world.</span><span class="go">Open →</span><svg class="sart" aria-hidden="true" viewBox="0 0 120 120"><use href="#plane"/></svg></a><a class="slide" href="#videos" role="group" aria-roledescription="slide" aria-label="4 of 4: PSP Videos"><span class="kick">Watch</span><span class="st">PSP Videos</span><span class="sd">Real events, explained in two minutes, with the law that applies.</span><span class="go">Open →</span><svg class="sart" aria-hidden="true" viewBox="0 0 120 120"><use href="#voice"/></svg></a></div>
+      <div class="dots2" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </section>
+  </div>
+  <div class="wrap"><aside class="adslot" aria-label="Advertisement" hidden><span class="label">Advertisement</span></aside></div>
+</section>
+
+<!-- ABOUT / WHY WE EXIST -->
+<section class="page" id="p-about" data-page="about" hidden>
+  <div class="wrap"><article class="about">
+    <span class="label blue">Why we exist · From the Office of the MD</span>
+    <h1>A question asked in public is how a society keeps its promises.</h1>
+    <p>Every day, ordinary people meet problems that a public office was created to solve: a hostel without a warden, a ration card that never arrives, a drain that is still cleaned by hand. Most of these problems are not hidden. They are simply never asked about in a way that an office has to answer.</p>
+    <p>Public Samta Press exists to ask. We take a letter from one person, check it with care, publish it, and carry it to the office that is responsible. Then we wait for the answer, and we publish that too.</p>
+    <p class="sig">Managing Director and Chief Editor, Public Samta Press</p>
+
+    <h2>What PSP is</h2>
+    <ul class="blist">
+      <li><b>A public press room.</b> Anyone can write to us, in English or Kannada, without giving a name.</li>
+      <li><b>A carrier of letters.</b> Each approved letter goes to the department that must answer, and to its grievance portal.</li>
+      <li><b>A record.</b> The letter, the date it was sent and the reply stay on this site, so the question cannot quietly disappear.</li>
+    </ul>
+
+    <h2>The strengths we carry</h2>
+    <ul class="blist">
+      <li><b>Verification.</b> An RTI expert, a human rights reviewer and a lawyer approve every article before it is published.</li>
+      <li><b>Privacy.</b> No name, no login, no cookies, no tracking. This site keeps <b>no DATA</b> about you.</li>
+      <li><b>Independence.</b> No one can pay us to publish, change or remove an article.</li>
+      <li><b>Follow-through.</b> If an office does not reply in 30 days, we file a request under the RTI Act asking what was done.</li>
+      <li><b>Equal respect.</b> Every person is treated the same, whatever their caste, income or status.</li>
+    </ul>
+
+    <h2>Why questioning matters</h2>
+    <p>Article 19(1)(a) of the Constitution protects every citizen's freedom of speech and expression. The Supreme Court has long held that this freedom includes the right to know how public power is used. The RTI Act, 2005 turned that right into a simple procedure: ask in writing, and an answer is due within 30 days.</p>
+    <p>Article 19(2) allows only reasonable limits on speech, on grounds such as public order, decency and defamation. So we ask with care. We question offices and duties, not private persons. We rely on facts that can be shown, and we give every office the chance to reply in full.</p>
+    <p class="quote">A question is not an accusation. It is a citizen asking the State to do what the law already says it must.</p>
+
+    <h2>Society's standards today</h2>
+    <div class="why3">
+      <div><b>Noise is fast</b><span>Online, a rumour travels further than a fact. We publish only what three reviewers have checked.</span></div>
+      <div><b>Letters get lost</b><span>Complaints move between offices and portals and are never closed. We keep the record open until there is a reply.</span></div>
+      <div><b>People are afraid</b><span>Many stay silent to stay safe. We never ask who you are, and we remove anything that could identify you.</span></div>
+    </div>
+
+    <h2>Why we do this</h2>
+    <p>We are not here for money. Money can buy many things, but it cannot give the peace of mind that comes when a real problem is finally solved, and some problems money cannot even reach. A letter answered, a hostel staffed, a family's ration restored: that is the return we work for.</p>
+    <p style="margin-top:var(--s4)"><a class="cta" href="#submit"><svg class="voice" aria-hidden="true"><use href="#voice"/></svg>Submit a letter to be solved</a></p>
+  </article></div>
+</section>
+
+<!-- ARTICLE -->
+<section class="page" id="p-story" data-page="story" hidden>
+  <div class="wrap">
+    <div class="row">
+      <span class="label blue">Articles · Carried to departments</span>
+      <p class="dek">Letters carried to departments appear here after all three approvals, with the office they were sent to, the 30-day reply clock under Section 7(1) of the RTI Act, and the reply in full. Below them, the desk publishes editorials on the law.</p>
+    </div>
+    <div class="row">
+      <div class="reply-box"><span class="label">No letters published yet</span><p>The press room opened in November 2026. The first letters are being reviewed now.</p><a class="cta" href="#submit" style="align-self:flex-start"><svg class="voice" aria-hidden="true"><use href="#voice"/></svg>Submit a letter</a></div>
+    </div>
+  </div>
+  <div class="wrap"><article class="about" id="ai-constitution" style="padding-top:var(--s4)">
+    <span class="label blue">Editorial · Constitution and AI</span>
+    <h1>The Constitution is the threshold every AI must cross</h1>
+    <p>Machines now help decide who gets a loan, which job application is read, whose name stays on a welfare list and whose face a camera picks out of a crowd. These systems are fast and often useful. But in India, no system stands above the Constitution. Whether a decision is made by an officer or by software, the same three promises apply: equality, free expression, and life with dignity and privacy.</p>
+
+    <h2>Article 14: equal treatment, even by a machine</h2>
+    <p>Article 14 promises equality before the law and the equal protection of the laws. The Supreme Court has held that arbitrary action is the opposite of equality. An AI system trained on old, unequal records can repeat that inequality at scale, quietly and without a reason anyone can read.</p>
+    <ul class="blist">
+      <li><b>The question to ask:</b> if a public office uses an automated tool, on what basis does it decide, and can a person see and challenge that basis?</li>
+      <li><b>The standard:</b> a decision that affects a person's rights must be <b>explainable, reasoned and open to appeal</b>, whoever or whatever made it.</li>
+    </ul>
+
+    <h2>Article 19: speech, and the deepfake problem</h2>
+    <p>Article 19(1)(a) protects free speech, and Article 19(2) allows only reasonable limits, such as defamation and public order. AI makes it easy to put false words in a real person's mouth. That is not protected speech when it deceives or defames.</p>
+    <ul class="blist">
+      <li><b>IT Act, Section 66D</b> punishes cheating by personation using a computer resource. <b>Section 66E</b> covers violating a person's privacy by capturing or sharing private images.</li>
+      <li><b>BNS, Section 356</b> covers defamation, including by visible representations.</li>
+      <li><b>IT Rules, 2021</b> require platforms to act on unlawful content, and the Government has moved to require labels on AI-generated content. Check the current text before relying on it.</li>
+    </ul>
+
+    <h2>Article 21: privacy is part of life</h2>
+    <p>In <i>K.S. Puttaswamy v. Union of India</i> (2017), nine judges held that privacy is a fundamental right. Any intrusion by the State must pass three tests: it must be backed by a <b>law</b>, serve a <b>legitimate aim</b>, and be <b>proportionate</b> to that aim. Face recognition, profiling and large data collection all have to pass these tests.</p>
+    <ul class="blist">
+      <li><b>DPDP Act, 2023:</b> personal DATA can be used only for a stated purpose, usually with <b>consent</b> that can be withdrawn.</li>
+      <li><b>Your rights:</b> to know what is held about you, to correct or erase it, and to complain, first to the company and then to the <b>Data Protection Board of India</b>.</li>
+      <li><b>DPDP Rules, 2025</b> bring these duties into force in phases.</li>
+    </ul>
+
+    <p class="quote">Technology can be new. The Constitution's questions are old: is it lawful, is it fair, and who is answerable?</p>
+
+    <h2>What you can do</h2>
+    <ul class="blist">
+      <li><b>Ask the office.</b> Under the RTI Act you can ask a public authority whether it uses an automated system to decide your case, and on what rules.</li>
+      <li><b>Ask the company.</b> Under the DPDP Act, ask what DATA it holds about you and why.</li>
+      <li><b>Report a deepfake.</b> Call <b>1930</b> or report at the National Cyber Crime Reporting Portal.</li>
+      <li><b>Write to PSP.</b> If an office or company will not answer, <a href="#submit">submit a letter</a> and we will carry it.</li>
+    </ul>
+
+    <h2>How PSP uses AI</h2>
+    <p>We use AI tools to help make videos and drafts. Every AI-made video is labelled. We never create the face or voice of a real person without their consent, and a human reviewer approves everything before it is published.</p>
+    <p class="sig">General information, not legal advice. Pending review by the PSP panel lawyer. Public Samta Press editorial desk, November 2026.</p>
+  </article></div>
+</section>
+
+<!-- SUBMIT -->
+<section class="page" id="p-submit" data-page="submit" hidden>
+  <div class="wrap">
+    <div class="formpage">
+      <div>
+        <span class="label blue">Submit a letter to be solved</span>
+        <h1>Write the problem. We carry it to the office that must solve it.</h1>
+        <div class="why3" style="margin-block:var(--s3)">
+          <div><b>It becomes a record</b><span>A spoken complaint is easy to forget. A published letter with a date is not.</span></div>
+          <div><b>It reaches the right desk</b><span>Our RTI expert finds the office and the post that is responsible.</span></div>
+          <div><b>It gets followed up</b><span>No reply in 30 days? We file an RTI asking what was done.</span></div>
+        </div>
+        <p class="dek">Write in English or Kannada. Stick to what you saw or can show. When you press Submit, your email app opens with the story ready to send to the PSP desk. You can send it from any email address, including a new one you make just for this.</p>
+        <form class="f" id="submit-form" novalidate>
+          <div class="field full"><label for="s-title">Headline</label><input id="s-title" maxlength="120" placeholder="e.g. Girls' hostel in our taluk has had no warden since June"></div>
+          <div class="field"><label for="s-dept">Concerned department</label>
+            <select id="s-dept"><option value="">Choose one, or "Not sure"</option><option>Social Welfare (SC/ST)</option><option>Police</option><option>Revenue</option><option>Education</option><option>Health and Family Welfare</option><option>Food and Civil Supplies</option><option>Women and Child Development</option><option>Labour</option><option>City municipal corporation</option><option>Rural Development and Panchayat Raj</option><option>Not sure, let the reviewers decide</option></select></div>
+          <div class="field"><label for="s-place">District or city</label><input id="s-place" placeholder="e.g. Kalaburagi"></div>
+          <div class="field full"><label for="s-body">Your letter</label><textarea id="s-body" placeholder="What happened, where, since when, and who is affected."></textarea><small>Don't name private people unless it is necessary. Name the office and the post instead.</small></div>
+          <div class="field full"><small><b>Photos or documents:</b> attach them in the email that opens. Turn off location on your phone camera first, or take a screenshot of the photo and attach that instead.</small></div>
+          <label class="check" for="s-ok"><input type="checkbox" id="s-ok"><span>This is true to the best of my knowledge.</span></label>
+          <div class="actions"><button type="submit" class="cta"><svg class="voice" aria-hidden="true"><use href="#voice"/></svg>Submit your letter</button><span class="label">Or write directly to <a href="mailto:desk@samtapress.in">desk@samtapress.in</a></span></div>
+          <div class="msg" id="s-msg" role="status" hidden></div>
+        </form>
+      </div>
+      <aside class="safe">
+        <span class="label blue">How we protect you</span>
+        <ul>
+          <li>We don't ask for your name or phone number.</li>
+          <li>There is no login, so there is no account to trace.</li>
+          <li>We never publish the email address you write from.</li>
+          <li>Use a fresh email address if you want extra distance.</li>
+          <li>The lawyer removes anything that could identify you.</li>
+        </ul>
+<aside class="route" aria-label="How your letter travels" style="margin-block:var(--s3)">
+        <span class="label">How your letter travels</span>
+        <ol>
+          <li><div><b>You write</b><span>No name, no login. You get a reference number.</span></div></li>
+          <li><div><b>Three approvals</b><span>An RTI expert, a human rights reviewer and a lawyer each sign off.</span></div></li>
+          <li><div><b>PSP publishes</b><span>Tagged with the department it concerns.</span></div></li>
+          <li><div><b>We carry it</b><span>Sent to the department and its grievance portal.</span></div></li>
+          <li><div><b>We follow up</b><span>No reply in 30 days? We file an RTI asking what was done.</span></div></li>
+        </ol>
+        <small>30 days is the reply deadline under Section 7(1) of the RTI Act, 2005.</small>
+      </aside>
+        <p class="law">Privacy is part of the right to life under Article 21 (<i>K.S. Puttaswamy v. Union of India</i>, 2017). Writing anonymously is part of free expression under Article 19(1)(a).</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT / ADVERTISE -->
+<section class="page" id="p-support" data-page="support" hidden>
+  <div class="wrap"><article class="about">
+    <span class="label blue">Support and advertise</span>
+    <h1>How PSP is funded, and how to reach us</h1>
+    <p>PSP is free to read and free to write to. To keep it running, we accept advertising and support on clear terms. Money never decides what we publish.</p>
+
+    <h2>How PSP earns</h2>
+    <ul class="blist">
+      <li><b>Labelled advertising.</b> Every ad is marked "Advertisement" and kept apart from the news.</li>
+      <li><b>Sponsored explainers.</b> A sponsor may support a general explainer. It is marked "Sponsored", and the sponsor has no say over the content.</li>
+      <li><b>Never for sale:</b> publishing, changing, delaying or removing an article. No one can pay for that, ever.</li>
+    </ul>
+
+    <h2>Advertise with PSP</h2>
+    <div class="why3">
+      <div><b>Display slot</b><span>One labelled ad per page, never inside an article.</span></div>
+      <div><b>Blog sponsor</b><span>A "Sponsored" line on a general explainer.</span></div>
+      <div><b>Video sponsor</b><span>A short card at the end of a PSP video, clearly labelled.</span></div>
+    </div>
+    <ul class="blist">
+      <li><b>ASCI code:</b> every ad must be honest, decent and not misleading.</li>
+      <li><b>No tracking ads.</b> We use no cookies or ad networks, so ads are shown the same to everyone.</li>
+      <li><b>Not accepted:</b> ads from parties to a story we are covering, betting, or anything unlawful.</li>
+      <li><b>Media kit:</b> ask the desk with the subject "Advertising". We will only share real audience numbers, once we have them.</li>
+    </ul>
+
+    <h2>Read and watch</h2>
+    <div class="why3">
+      <a href="#blog" style="text-decoration:none;color:inherit"><div style="height:100%"><b>Blog →</b><span>Short explainers on laws and public problems.</span></div></a>
+      <a href="#videos" style="text-decoration:none;color:inherit"><div style="height:100%"><b>Videos →</b><span>Real events, explained in two minutes.</span></div></a>
+      <a href="#story" style="text-decoration:none;color:inherit"><div style="height:100%"><b>Articles →</b><span>Letters carried to departments, and editorials.</span></div></a>
+    </div>
+
+    <h2>Address and contact</h2>
+    <ul class="blist">
+      <li><b>Office of the Managing Director and Chief Editor:</b> <a href="mailto:md@samtapress.in">md@samtapress.in</a></li>
+      <li><b>Editorial desk and advertising:</b> <a href="mailto:desk@samtapress.in?subject=Advertising">desk@samtapress.in</a></li>
+      <li><b>Grievance Officer:</b> <a href="mailto:grievance@samtapress.in">grievance@samtapress.in</a></li>
+      <li><b>Reviews:</b> <a href="https://share.google/LC6Tb7pvOiBltygO6" target="_blank" rel="noopener noreferrer">Review PSP on Google ↗</a>. A plain link: nothing from Google loads on this site.</li>
+      <li><b>Published from:</b> Bengaluru, Karnataka, India.</li>
+      <li><b>Postal address for legal notices:</b> an office or PO box address will be published here before launch.</li>
+    </ul>
+  </article></div>
+</section>
+
+<!-- TRACK -->
+<section class="page" id="p-track" data-page="track" hidden>
+  <div class="wrap">
+    <div class="formpage">
+      <div>
+        <span class="label blue">Follow up on your story</span>
+        <h1>We reply to the email you wrote from</h1>
+        <p class="dek">After you submit, the desk replies with a reference number like PSP-2611-0001. Use that number in any follow-up so we can find your story without knowing who you are.</p>
+        <ol class="timeline" style="margin-top:24px">
+          <li><time>Day 0</time><span class="dot"></span><p><b>Received.</b> You get a reference number.</p></li>
+          <li><time>Review</time><span class="dot"></span><p><b>Three approvals.</b> RTI expert, human rights reviewer, lawyer.</p></li>
+          <li><time>Publish</time><span class="dot"></span><p><b>Published</b> on PSP and <b>carried</b> to the department.</p></li>
+          <li class="next"><time>Day 30</time><span class="dot"></span><p><b>RTI filed</b> if the department has not replied.</p></li>
+        </ol>
+        <p style="margin-top:12px"><a class="btn" href="mailto:desk@samtapress.in?subject=Follow-up%20PSP-">Email the desk with your reference</a></p>
+      </div>
+      <aside class="safe">
+        <span class="label blue">Lost your reference?</span>
+        <p style="font-size:16px">Write again from the same email address and we can find it. If you used a different address, send the headline and we'll match it.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- RIGHTS -->
+<section class="page" id="p-rights" data-page="rights" hidden>
+  <div class="wrap">
+    <div class="row">
+      <span class="label blue">Know your rights</span>
+      <h1 style="font:700 clamp(32px,4vw,46px)/1.1 var(--serif);margin-block:8px 10px">The law behind writing to power</h1>
+      <p class="dek">Each right below has a court ruling or statute behind it. These are the ones our reviewers rely on most.</p>
+    </div>
+    <div class="law-list" style="padding-bottom:30px">
+      <div class="law-item"><div class="num">Art. 19(1)(a)</div><div><h3>You may speak and publish</h3><p>Limited only by the grounds in Article 19(2), such as defamation, public order and incitement.</p><p class="case"><i>Shreya Singhal v. Union of India</i> (2015) struck down Section 66A of the IT Act for chilling online speech.</p></div></div>
+      <div class="law-item"><div class="num">Art. 21</div><div><h3>Your privacy is protected</h3><p>Privacy is part of the right to life and personal liberty.</p><p class="case"><i>K.S. Puttaswamy v. Union of India</i> (2017), nine-judge bench.</p></div></div>
+      <div class="law-item"><div class="num">RTI Act §6, §7</div><div><h3>You may ask any public office</h3><p>You don't have to give a reason for asking (§6(2)). A reply is due in 30 days, or 48 hours when life or liberty is involved (§7(1)).</p></div></div>
+      <div class="law-item"><div class="num">Art. 226, 32</div><div><h3>Courts can make an office act</h3><p>A High Court (Art. 226) or the Supreme Court (Art. 32) can issue a writ of mandamus when an authority ignores a legal duty.</p></div></div>
+      <div class="law-item"><div class="num">Art. 14, 15, 17</div><div><h3>Equality before the law</h3><p>No discrimination by the State on grounds of religion, race, caste, sex or place of birth. Untouchability is abolished.</p><p class="case">Enforced through the SC/ST (Prevention of Atrocities) Act, 1989.</p></div></div>
+      <div class="law-item"><div class="num">Call 1930</div><div><h3>If your data or money was taken in a cyber fraud</h3><p>Call the national cyber crime helpline 1930 or report at cybercrime.gov.in at once. Tell your bank within 3 working days: under the RBI circular of 6 July 2017, your loss can then be zero for an unauthorised transaction that was not your fault.</p></div></div>
+      <div class="law-item"><div class="num">Whistle Blowers Protection Act, 2014</div><div><h3>Reporting corruption by officials</h3><p>People who report corruption or misuse of power by a public servant can seek protection from victimisation under this Act.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VERIFY / ABOUT -->
+<section class="page" id="p-verify" data-page="verify" hidden>
+  <div class="wrap">
+    <div class="row">
+      <span class="label blue">How we verify · About PSP</span>
+      <h1 style="font:700 clamp(32px,4vw,46px)/1.1 var(--serif);margin-block:8px 10px">Three people approve every article</h1>
+      <p class="dek">Public Samta Press is a public press room. Anyone can write. Nothing is published until all three reviewers say yes, and then we carry it to the office that has to answer.</p>
+    </div>
+    <div class="row">
+      <div class="people">
+        <div class="person"><span class="dots" aria-hidden="true"><b></b></span><h3>The RTI expert</h3><p>Finds which public authority owns the problem.</p><ul><li>Names the office and the post responsible</li><li>Drafts the RTI if no reply comes in 30 days</li></ul></div>
+        <div class="person"><span class="dots" aria-hidden="true"><b></b><b></b></span><h3>The human rights reviewer</h3><p>Checks the facts and the people affected.</p><ul><li>Confirms with at least one other source</li><li>Flags risk to the writer or to victims</li></ul></div>
+        <div class="person"><span class="dots" aria-hidden="true"><b></b><b></b><b></b></span><h3>The lawyer</h3><p>Makes it safe to publish.</p><ul><li>Removes anything that identifies the writer</li><li>Cuts claims about private people that could be defamatory</li></ul></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="head"><h2>Who runs PSP</h2></div>
+      <p class="dek">Public Samta Press is led by its Managing Director and Chief Editor, who is the publisher responsible for everything on this site. Write to the Office of the MD at <a href="mailto:md@samtapress.in">md@samtapress.in</a>.</p>
+    </div>
+    <div class="row">
+      <div class="head"><h2>What we never do</h2></div>
+      <div class="never">
+        <p>Ask for your name, phone number or email.</p>
+        <p>Publish before all three approvals.</p>
+        <p>Use the State Emblem, the Ashoka Chakra or the national flag, so no one mistakes us for a government site.</p>
+        <p>Take payment to publish, delay or remove an article.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="page" id="p-videos" data-page="videos" hidden>
+  <div class="vhero"><div class="wrap">
+    <span class="label blue">PSP Videos</span>
+    <h1>Real events, explained in two minutes</h1>
+    <p class="dek">Each article gets a short video: what happened, which law applies, and which office must answer.</p>
+    <div class="vframe" id="vframe" data-video="videos"><div class="vempty"><button type="button" class="playbtn" aria-label="Play the PSP video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg></button><p>The first video is coming with Day 1.</p></div></div>
+  </div></div>
+  <div class="wrap"><div class="row"><div class="head"><h2>Coming up</h2></div>
+    <div class="grid3">
+      <div class="story"><div class="meta"><span class="pill review">Day 1</span></div><h3>Why PSP: write without your name</h3></div>
+      <div class="story"><div class="meta"><span class="pill review">Day 2</span></div><h3>Paid but no bill? Your right to a GST invoice</h3></div>
+      <div class="story"><div class="meta"><span class="pill review">Day 3</span></div><h3>Lost money online? The 3-day rule and 1930</h3></div>
+      <div class="story"><div class="meta"><span class="pill review">Day 4</span></div><h3>The Constitution and AI: where the line is drawn</h3></div>
+    </div></div></div>
+</section>
+
+<!-- BLOG -->
+<section class="page" id="p-blog" data-page="blog" hidden>
+  <div class="wrap">
+    <div class="row">
+      <span class="label blue">Blog</span>
+      <h1 style="font:500 clamp(32px,4vw,46px)/1.1 var(--serif);margin-block:8px 10px">Notes from the desk</h1>
+      <p class="dek">Short explainers on laws and public problems, between the reviewed articles.</p>
+    </div>
+    <div class="row"><div class="grid3">
+      <a class="story" href="#story"><div class="meta"><span class="pill review">Editorial</span></div><h3>The Constitution is the threshold every AI must cross</h3><p>Articles 14, 19 and 21, the DPDP Act and deepfakes, in plain words.</p></a>
+      <a class="story" href="#laws"><div class="meta"><span class="pill rti">Explainer</span></div><h3>IPC is now BNS: what changed on 1 July 2024</h3><p>The old section numbers you know, matched to the new ones.</p></a>
+      <a class="story" href="#rights"><div class="meta"><span class="pill rti">Explainer</span></div><h3>RTI in 30 days: how to ask any public office</h3><p>No reason needed, and a reply is due within 30 days.</p></a>
+      <a class="story" href="#laws"><div class="meta"><span class="pill rti">Explainer</span></div><h3>Your data, your rights: the DPDP Act in plain words</h3><p>What banks, apps and companies must now do with your data.</p></a>
+    </div></div>
+    <aside class="adslot" aria-label="Advertisement" hidden><span class="label">Advertisement</span></aside>
+  </div>
+</section>
+
+<!-- LAWS -->
+<section class="page" id="p-laws" data-page="laws" hidden>
+  <div class="wrap">
+    <div class="row">
+      <span class="label blue">Laws library</span>
+      <h1 style="font:500 clamp(32px,4vw,46px)/1.1 var(--serif);margin-block:8px 10px">The laws behind your rights, in India, Asia and the world</h1>
+      <p class="dek">Criminal, property, corporate, data privacy and AI law, in plain words. General information, not legal advice. Our panel lawyer checks every article that relies on these laws.</p>
+      <div class="tabs" role="group" aria-label="Show laws from">
+        <button type="button" data-g="all" aria-pressed="true">All</button><button type="button" data-g="india" aria-pressed="false">India</button><button type="button" data-g="property" aria-pressed="false">Property</button><button type="button" data-g="corporate" aria-pressed="false">Corporate</button><button type="button" data-g="world" aria-pressed="false">World</button><button type="button" data-g="asia" aria-pressed="false">Asia</button><button type="button" data-g="intl" aria-pressed="false">Treaties and AI</button>
+      </div>
+    </div>
+    <div class="lawgroup" data-g="india">
+      <div class="head" style="margin-top:24px"><h2>India</h2></div>
+      <div class="law-list"><div class="law-item"><div class="num">BNS 2023</div><div><h3>Bharatiya Nyaya Sanhita replaced the IPC</h3><p>In force from 1 July 2024. Offences committed before that date are still tried under the IPC, 1860.</p></div></div><div class="law-item"><div class="num">BNSS 2023</div><div><h3>Bharatiya Nagarik Suraksha Sanhita replaced the CrPC</h3><p>Section 173 lets you file an FIR at any police station (a Zero FIR) and by electronic means. Under Section 175(3) a magistrate can order police to investigate when they don't.</p></div></div><div class="law-item"><div class="num">BSA 2023</div><div><h3>Bharatiya Sakshya Adhiniyam replaced the Evidence Act</h3><p>Section 63 covers electronic records such as screenshots, emails and chats. They need a certificate to be accepted as evidence.</p></div></div><div class="law-item"><div class="num">IT Act 2000</div><div><h3>Online offences</h3><p>Section 66C covers identity theft, 66D cheating by impersonation using a computer, and 72A disclosure of personal information in breach of contract.</p></div></div><div class="law-item"><div class="num">DPDP Act 2023</div><div><h3>Digital Personal Data Protection Act</h3><p>Companies, banks and apps must take consent, protect your data, and report breaches. You may ask for your data to be corrected or erased. The DPDP Rules were notified in November 2025, and most duties take effect in phases after that.</p></div></div><div class="law-item"><div class="num">RTI Act 2005</div><div><h3>Right to Information</h3><p>A public office must reply within 30 days (Section 7(1)), or 48 hours when life or liberty is at stake.</p></div></div><div class="law-item"><div class="num">CPA 2019</div><div><h3>Consumer Protection Act</h3><p>Covers unfair trade practices, overcharging above MRP and e-commerce sellers. You can file a complaint online at the consumer commission (e-Daakhil).</p></div></div><div class="law-item"><div class="num">RBI</div><div><h3>Banks and NBFCs</h3><p>Report an unauthorised transaction within 3 working days for zero liability (RBI circular, 6 July 2017). Complaints against banks and NBFCs go to the RBI Integrated Ombudsman at cms.rbi.org.in.</p></div></div></div>
+      <div class="row">
+        <div class="head"><h2>Old IPC to new BNS</h2></div>
+        <div class="table"><table><thead><tr><th>Offence</th><th>Before 1 July 2024</th><th>From 1 July 2024</th></tr></thead><tbody><tr><td class="t">Defamation</td><td class="n">IPC 499, 500</td><td class="n">BNS 356</td></tr><tr><td class="t">Cheating</td><td class="n">IPC 420</td><td class="n">BNS 318</td></tr><tr><td class="t">Criminal breach of trust</td><td class="n">IPC 406</td><td class="n">BNS 316</td></tr><tr><td class="t">Theft</td><td class="n">IPC 378, 379</td><td class="n">BNS 303</td></tr><tr><td class="t">Criminal intimidation</td><td class="n">IPC 503, 506</td><td class="n">BNS 351</td></tr><tr><td class="t">Organised crime</td><td class="n">Not in IPC</td><td class="n">BNS 111</td></tr></tbody></table></div>
+      </div>
+    </div>
+    <div class="lawgroup" data-g="property">
+      <div class="head" style="margin-top:24px"><h2>Property and land (India)</h2></div>
+      <div class="law-list"><div class="law-item"><div class="num">TP Act 1882</div><div><h3>Transfer of Property Act</h3><p>The rules for sale, mortgage, lease and gift of property. A sale of land worth ₹100 or more must be by a registered deed (Section 54).</p></div></div><div class="law-item"><div class="num">Registration Act 1908</div><div><h3>Registering documents</h3><p>Sale deeds, gift deeds and other documents listed in Section 17 must be registered. Under Section 49, an unregistered document of that kind cannot transfer the property.</p></div></div><div class="law-item"><div class="num">HSA 1956</div><div><h3>Hindu Succession Act</h3><p>Since the 2005 amendment to Section 6, daughters are coparceners by birth with the same rights as sons.</p></div></div><div class="law-item"><div class="num">Partition Act 1893</div><div><h3>Dividing joint property</h3><p>A court can order a joint property divided, or sold and the money shared, when co-owners can't agree.</p></div></div><div class="law-item"><div class="num">SRA 1963</div><div><h3>Specific Relief Act</h3><p>Lets a buyer ask the court to enforce an agreement to sell, or to cancel a document obtained by fraud.</p></div></div><div class="law-item"><div class="num">RERA 2016</div><div><h3>Real Estate (Regulation and Development) Act</h3><p>Protects flat and plot buyers from builders: registered projects, escrow of buyers' money, and refunds with interest for delay. Karnataka complaints go to K-RERA.</p></div></div><div class="law-item"><div class="num">Limitation Act 1963</div><div><h3>Time limits to go to court</h3><p>Most suits must be filed within a fixed time, often 3 years, and 12 years for possession of land. Check the time limit early.</p></div></div></div>
+    </div>
+    <div class="lawgroup" data-g="corporate">
+      <div class="head" style="margin-top:24px"><h2>Corporate and business (India)</h2></div>
+      <div class="law-list"><div class="law-item"><div class="num">Companies Act 2013</div><div><h3>Companies</h3><p>Covers how companies are formed, run, audited and closed, and the duties of directors. Section 135 makes larger companies spend on CSR.</p></div></div><div class="law-item"><div class="num">LLP Act 2008</div><div><h3>Limited Liability Partnerships</h3><p>Partners' liability is limited to what they agreed to contribute. LLPs file yearly returns with the Registrar of Companies.</p></div></div><div class="law-item"><div class="num">IBC 2016</div><div><h3>Insolvency and Bankruptcy Code</h3><p>A creditor can start insolvency against a company that defaults, through the NCLT, for a default of ₹1 crore or more.</p></div></div><div class="law-item"><div class="num">MSMED Act 2006</div><div><h3>Micro, small and medium enterprises</h3><p>A buyer must pay a registered MSME within 45 days, or pay compound interest. Disputes go to the MSME Facilitation Council (Samadhaan portal).</p></div></div><div class="law-item"><div class="num">GST Acts 2017</div><div><h3>Goods and Services Tax</h3><p>A registered business must issue a tax invoice showing its GSTIN. A customer can ask for the bill.</p></div></div><div class="law-item"><div class="num">Competition Act 2002</div><div><h3>Fair markets</h3><p>The Competition Commission of India acts against cartels and abuse of a dominant position.</p></div></div></div>
+    </div>
+    <div class="lawgroup" data-g="world">
+      <div class="head" style="margin-top:24px"><h2>Around the world: Canada, US, UK, South Africa, Russia</h2></div>
+      <div class="law-list"><div class="law-item"><div class="num">Canada</div><div><h3>Charter of Rights and Freedoms 1982 · PIPEDA</h3><p>Section 2(b) protects freedom of expression and the press, and Section 8 protects against unreasonable search. PIPEDA governs personal data held by private companies.</p></div></div><div class="law-item"><div class="num">United States</div><div><h3>First Amendment · FOIA 1966</h3><p>The First Amendment protects speech and the press. The Freedom of Information Act gives the public access to federal records. There is no single federal privacy law, and states such as California (CCPA) have their own.</p></div></div><div class="law-item"><div class="num">United Kingdom</div><div><h3>Human Rights Act 1998 · UK GDPR · FOIA 2000</h3><p>Rights to privacy (Article 8) and expression (Article 10) apply in UK courts. Personal data is covered by the UK GDPR and the Data Protection Act 2018, and public records by the Freedom of Information Act 2000.</p></div></div><div class="law-item"><div class="num">South Africa</div><div><h3>Constitution 1996 · POPIA 2013 · PAIA 2000</h3><p>Sections 14 (privacy) and 16 (expression) protect the press. POPIA, fully in force since July 2021, protects personal data. PAIA works like India's RTI.</p></div></div><div class="law-item"><div class="num">Russia</div><div><h3>Constitution 1993 · Federal Law 152-FZ</h3><p>Article 23 protects privacy and Article 29 freedom of thought and speech. Law 152-FZ on Personal Data requires data about Russian citizens to be stored in Russia.</p></div></div></div>
+    </div>
+    <div class="lawgroup" data-g="asia">
+      <div class="head" style="margin-top:24px"><h2>Asia: data protection</h2></div>
+      <div class="law-list"><div class="law-item"><div class="num">Singapore</div><div><h3>Personal Data Protection Act 2012</h3><p>Consent, purpose limits and breach notification for organisations.</p></div></div><div class="law-item"><div class="num">China</div><div><h3>Personal Information Protection Law 2021</h3><p>Strict consent and cross-border transfer rules.</p></div></div><div class="law-item"><div class="num">Japan</div><div><h3>Act on the Protection of Personal Information 2003</h3><p>Amended several times. Enforced by the Personal Information Protection Commission.</p></div></div><div class="law-item"><div class="num">South Korea</div><div><h3>Personal Information Protection Act 2011</h3><p>One of Asia's strictest data laws.</p></div></div><div class="law-item"><div class="num">Sri Lanka</div><div><h3>Personal Data Protection Act No. 9 of 2022</h3><p>South Asia's first full data protection law.</p></div></div><div class="law-item"><div class="num">Thailand · Indonesia</div><div><h3>PDPA 2019 · PDP Law No. 27 of 2022</h3><p>Both follow a consent and data-rights model close to Europe's GDPR.</p></div></div></div>
+    </div>
+    <div class="lawgroup" data-g="intl">
+      <div class="head" style="margin-top:24px"><h2>Treaties, data and AI</h2></div>
+      <div class="law-list" style="padding-bottom:30px"><div class="law-item"><div class="num">UDHR 1948</div><div><h3>Universal Declaration of Human Rights</h3><p>Article 12 protects privacy and Article 19 free expression.</p></div></div><div class="law-item"><div class="num">ICCPR 1966</div><div><h3>International Covenant on Civil and Political Rights</h3><p>Articles 17 (privacy) and 19 (expression) bind India, which acceded in 1979.</p></div></div><div class="law-item"><div class="num">EU GDPR</div><div><h3>General Data Protection Regulation 2016/679</h3><p>Applies since 25 May 2018, including to Indian companies that serve people in the EU.</p></div></div><div class="law-item"><div class="num">EU AI Act</div><div><h3>Regulation 2024/1689</h3><p>The first broad AI law. In force since 1 August 2024, with duties phased in through 2026 and 2027.</p></div></div><div class="law-item"><div class="num">India and AI</div><div><h3>No AI-specific law yet</h3><p>AI systems that handle personal data are covered by the IT Act and the DPDP Act.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section class="page" id="p-privacy" data-page="privacy" hidden>
+  <div class="wrap">
+    <div class="row">
+      <span class="label blue">Privacy and disclaimer</span>
+      <h1 style="font:700 clamp(32px,4vw,46px)/1.1 var(--serif);margin-block:8px 10px">Your identity stays with us</h1>
+    </div>
+    <div class="pgrid"><div class="pblock"><h2>No tracking</h2><ul><li><b>No cookies</b>, no analytics, no tracking pixels.</li><li><b>No browser storage</b>: the site remembers nothing about your visit.</li><li>Fonts and images come from <b>our own site</b>, so no outside company sees you.</li><li><b>No downloads</b> except official PSP articles.</li></ul></div><div class="pblock"><h2>Your DATA</h2><ul><li>We collect <b>only</b> the email address you write from and what you write.</li><li>We <b>never publish</b> your email address or anything that identifies you.</li><li>We keep it <b>until your matter is closed</b>, then delete it.</li></ul></div><div class="pblock"><h2>Consent (DPDP Act 2023)</h2><ul><li>Sending us a story is your <b>consent</b> for one purpose: review and, with your approval, publication without your name.</li><li><b>Withdraw</b> consent any time before publication: desk@samtapress.in.</li><li>You may ask to <b>see, correct or erase</b> your data.</li><li>Not resolved? Approach the <b>Data Protection Board of India</b>.</li></ul></div><div class="pblock"><h2>AI use</h2><ul><li>AI tools may help <b>draft</b> explainers, summaries and videos.</li><li>A <b>human editor</b> checks every one.</li><li>The <b>panel lawyer</b> approves anything that relies on the law.</li><li><b>AI never decides</b> what is published.</li></ul></div><div class="pblock"><h2>Not a law firm</h2><ul><li>This site gives <b>legal information, not legal advice</b>.</li><li>Reading it does <b>not</b> create a lawyer and client relationship.</li><li><b>Bar Council of India Rules</b> bar advocates from advertising, so PSP does not advertise or refer to its panel lawyers.</li><li>For your own matter: an advocate of your choice, or the <b>District Legal Services Authority</b> for free legal aid.</li></ul></div><div class="pblock"><h2>Publisher</h2><ul><li>PSP is an <b>independent publisher</b>, not a government body.</li><li>The <b>Managing Director and Chief Editor</b> is responsible for everything published.</li><li>Published from <b>Bengaluru, Karnataka, India</b>. No street address is shown, for safety.</li></ul></div><div class="pblock"><h2>Ads</h2><ul><li>Ads are always labelled <b>Advertisement</b> and kept apart from news.</li><li>We follow the <b>ASCI code</b> (Advertising Standards Council of India).</li><li><b>No payment</b> ever to publish, change or remove an article.</li><li>Report an ad: <b>ASCI</b> in India, Ad Standards (Canada), Ad Standards Council (Philippines), ASA (UK), FTC (US).</li></ul></div><div class="pblock"><h2>Our work, our copyright</h2><ul><li>All text, videos, artwork and the PSP logo are <b>© Public Samta Press</b>.</li><li><b>Do not copy, reuse, edit or republish</b> any of it without our written permission. Ask at desk@samtapress.in.</li><li>Photos of people must <b>not be used or edited</b> without their consent.</li><li>The watermark is a <b>notice, not a lock</b>: it shows who owns the work, and the law protects it (Copyright Act, 1957).</li></ul></div><div class="pblock"><h2>Grievance</h2><ul><li>Write to <b>grievance@samtapress.in</b>, subject "Grievance".</li><li>Acknowledged in <b>24 hours</b>, decided in <b>15 days</b> (IT Rules 2021, Part III).</li><li>We reply by <b>email only</b>.</li></ul></div></div>
+  </div>
+  <div class="join"><div class="wrap">
+    <span class="wm"><img src="join-people.svg" alt="People of all ages gathered around a laptop" width="800" height="520" loading="lazy"></span>
+    <div><span class="label blue">Join the press room</span><h2>Every voice counts the same</h2><p>Students, workers, farmers, retired officers, parents: everyone can write to PSP. Add your voice.</p><a class="cta" href="#submit"><svg class="voice" aria-hidden="true"><use href="#voice"/></svg>Submit your story</a></div>
+  </div></div>
+</section>
+
+</main>
+
+<footer class="site" id="footer">
+  <div class="wrap">
+    <div class="about">
+      <svg class="logo" viewBox="0 0 424 132" role="img" aria-label="Public Samta Press"><use href="#logo"/></svg>
+      <span class="tag" style="color:#D9B25A">Care · Compassion · Courage</span>
+      <div class="pledge"><p data-i18n="pledge">Equal respect for every person, whatever their caste, income or status.</p><small>Articles 14, 15, 17 and 21, Constitution of India</small></div>
+      <p>A public press room. Write without your name, and we carry it to the office that must answer.</p>
+    </div>
+    <div><h4>Write</h4><ul><li><a href="#submit">Submit a letter</a></li><li><a href="#track">Follow up on your story</a></li><li><a href="#verify">How we verify</a></li></ul></div>
+    <div><h4>Read</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">Why we exist</a></li><li><a href="#story">Articles</a></li><li><a href="#support">Support and advertise</a></li><li><a href="#rights">Know your rights</a></li><li><a href="#laws">Laws library</a></li><li><a href="#videos">Videos</a></li><li><a href="#blog">Blog</a></li></ul></div>
+    <div><h4>Grievance officer</h4><p class="grv">Grievance Officer, Public Samta Press<br><a href="mailto:grievance@samtapress.in">grievance@samtapress.in</a><br>Complaints are acknowledged within 24 hours and decided within 15 days, under Part III of the IT Rules, 2021.</p></div>
+    <div class="base"><span>© 2026 Public Samta Press · samtapress.in · All rights reserved. Do not copy or reuse text, videos or photos without written permission.</span><span><a href="#privacy">Privacy and disclaimer</a> · Desk: <a href="mailto:desk@samtapress.in">desk@samtapress.in</a> · Office of the MD: <a href="mailto:md@samtapress.in">md@samtapress.in</a> · <a href="https://share.google/LC6Tb7pvOiBltygO6" target="_blank" rel="noopener noreferrer">Review PSP on Google ↗</a></span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+
+  try{document.getElementById("today").textContent=new Date().toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"long",year:"numeric"})}catch(e){}
+  var pages=["home","about","submit","story","support","track","rights","verify","privacy","laws","videos","blog"];
+  var drawer=document.getElementById("drawer"),openB=document.getElementById("menu-open");
+  function closeDrawer(){drawer.hidden=true;openB.setAttribute("aria-expanded","false")}
+  function show(p,scroll){
+    if(pages.indexOf(p)<0)p="home";
+    pages.forEach(function(x){document.getElementById("p-"+x).hidden=(x!==p)});
+    document.querySelectorAll('nav.beats a,.drawer li a').forEach(function(a){
+      var h=a.getAttribute("href").slice(1);
+      if(h===p&&!(a.parentNode.classList.contains("push")))a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");
+    });
+    closeDrawer();
+    if(scroll)window.scrollTo(0,0);
+  }
+  document.addEventListener("click",function(e){
+    var a=e.target.closest('a[href^="#"]');if(!a)return;
+    var h=a.getAttribute("href").slice(1);
+    if(pages.indexOf(h)>=0){e.preventDefault();show(h,true);try{history.replaceState(null,"","#"+h)}catch(_){}}
+    else if(h==="footer"){e.preventDefault();closeDrawer();document.getElementById("footer").scrollIntoView()}
+  });
+  show((location.hash||"#home").slice(1),false);
+
+  openB.addEventListener("click",function(){drawer.hidden=false;openB.setAttribute("aria-expanded","true");document.getElementById("menu-close").focus()});
+  document.getElementById("menu-close").addEventListener("click",function(){closeDrawer();openB.focus()});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!drawer.hidden){closeDrawer();openB.focus()}});
+
+  document.querySelectorAll(".tabs button").forEach(function(b){b.addEventListener("click",function(){
+    var g=b.dataset.g;document.querySelectorAll(".tabs button").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+    document.querySelectorAll(".lawgroup").forEach(function(s){s.hidden=!(g==="all"||s.dataset.g===g)});
+  })});
+  var track=document.getElementById("track"),dots=document.querySelectorAll(".dots2 i");
+  function slideW(){var s=track.querySelector(".slide");return s?s.getBoundingClientRect().width+16:300}
+  document.querySelectorAll(".sbtn").forEach(function(b){b.addEventListener("click",function(){track.scrollBy({left:slideW()*(+b.dataset.dir),behavior:"smooth"})})});
+  function markDot(){var i=Math.round(track.scrollLeft/slideW());dots.forEach(function(d,j){d.classList.toggle("on",j===i)})}
+  track.addEventListener("scroll",markDot,{passive:true});markDot();
+  var pop=document.getElementById("pop"),popShown=false;
+  function showPop(){if(popShown)return;popShown=true;pop.hidden=false;requestAnimationFrame(function(){pop.classList.add("in")})}
+  window.addEventListener("scroll",function(){if(window.scrollY>600)showPop()},{passive:true});
+  setTimeout(showPop,12000);
+  document.getElementById("pop-x").addEventListener("click",function(){pop.hidden=true});
+  pop.querySelector("a").addEventListener("click",function(){pop.hidden=true});
+  var hdr=document.querySelector("header.site");
+  // PSP films: paste the YouTube video ID between the quotes when ready.
+  // Nothing loads from YouTube until a visitor presses Play (privacy mode, youtube-nocookie.com).
+  var VIDEOS={videos:""};
+  function setHdr(){root.style.setProperty("--hdr",hdr.offsetHeight+"px")}
+  setHdr();window.addEventListener("resize",setHdr);
+  document.querySelectorAll("[data-video]").forEach(function(box){
+    var id=VIDEOS[box.dataset.video],btn=box.querySelector(".playbtn");if(!btn)return;
+    if(!/^[A-Za-z0-9_-]{11}$/.test(id)){btn.disabled=true;btn.setAttribute("aria-label","The PSP film is coming soon");return}
+    btn.addEventListener("click",function(){
+      var f=document.createElement("iframe");
+      f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1&rel=0&modestbranding=1";
+      f.title="PSP film";f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen";f.referrerPolicy="no-referrer";f.allowFullscreen=true;
+      box.innerHTML="";box.appendChild(f);
+    });
+  });
+  function onScroll(){hdr.classList.toggle("slim",window.scrollY>140)}
+  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+
+  var kn={pledge:"ಜಾತಿ, ಆದಾಯ, ಸ್ಥಾನಮಾನ ನೋಡದೆ ಪ್ರತಿಯೊಬ್ಬರಿಗೂ ಸಮಾನ ಗೌರವ.",promise:"ಹೆಸರು ಬೇಡ. ಪ್ರತಿ ಲೇಖನವನ್ನು ಮೂವರು ಪರಿಶೀಲಕರು ಅನುಮೋದಿಸುತ್ತಾರೆ.",track:"ನಿಮ್ಮ ಲೇಖನ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ",tag:"ಕಾಳಜಿ · ಕರುಣೆ · ಧೈರ್ಯ",mission:"ಜನರ ಪತ್ರಿಕೆ, ಉತ್ತರಿಸಬೇಕಾದ ಕಚೇರಿಗೆ ತಲುಪಿಸುತ್ತದೆ",submit:"ಪತ್ರ ಸಲ್ಲಿಸಿ",n0:"ಮುಖಪುಟ",n6:"ನಾವು ಏಕೆ",n7:"ಪತ್ರ ಸಲ್ಲಿಸಿ",n1:"ಲೇಖನಗಳು",n2:"ನಿಮ್ಮ ಲೇಖನ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ",n3:"ನಿಮ್ಮ ಹಕ್ಕುಗಳು",n4:"ನಾವು ಹೇಗೆ ಪರಿಶೀಲಿಸುತ್ತೇವೆ",n5:"PSP ಬಗ್ಗೆ",week:"ಈ ವಾರ",k1:"ನಿಮ್ಮ ಧ್ವನಿ, ನಿಮ್ಮ ಹೆಸರಿಲ್ಲದೆ",hh:"ತಪ್ಪು ಏನೆಂದು ಬರೆಯಿರಿ. ಉತ್ತರಿಸಬೇಕಾದ ಕಚೇರಿಗೆ ನಾವು ತಲುಪಿಸುತ್ತೇವೆ.",hd:"ವಾರ್ಡನ್ ಇಲ್ಲದ ಹಾಸ್ಟೆಲ್, ಕುಟುಂಬಗಳನ್ನು ವಾಪಸ್ ಕಳುಹಿಸುವ ಪಡಿತರ ಅಂಗಡಿ, ಈಗಲೂ ಕೈಯಿಂದ ಸ್ವಚ್ಛಗೊಳಿಸುವ ಚರಂಡಿ. ನೀವು ಕಂಡದ್ದನ್ನು ತಿಳಿಸಿ. ಮಾಹಿತಿ ಹಕ್ಕು ತಜ್ಞರು, ಮಾನವ ಹಕ್ಕುಗಳ ಪರಿಶೀಲಕರು ಮತ್ತು ವಕೀಲರು ಅನುಮೋದಿಸಿದ ನಂತರ ಪ್ರಕಟಿಸಿ, ಸಂಬಂಧಿತ ಇಲಾಖೆಗೆ ಕಳುಹಿಸುತ್ತೇವೆ."};
+  var nodes=document.querySelectorAll("[data-i18n]"),en={};
+  nodes.forEach(function(n){en[n.dataset.i18n]=n.innerHTML});
+  function setLang(l){
+    nodes.forEach(function(n){var k=n.dataset.i18n;if(l==="kn"&&kn[k])n.textContent=kn[k];else n.innerHTML=en[k]});
+    root.lang=l;
+    document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===l?"true":"false")});
+  }
+  document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.lang)})});
+
+  var f=document.getElementById("submit-form"),m=document.getElementById("s-msg");
+  f.addEventListener("submit",function(e){
+    e.preventDefault();m.classList.remove("err");
+    var t=document.getElementById("s-title").value.trim(),b=document.getElementById("s-body").value.trim();
+    if(!t||b.length<40){m.textContent="Add a headline and a few sentences about what happened.";m.classList.add("err");m.hidden=false;return}
+    if(!document.getElementById("s-ok").checked){m.textContent="Tick the box to confirm the article is true to the best of your knowledge.";m.classList.add("err");m.hidden=false;return}
+    var d=document.getElementById("s-dept").value||"Not sure",pl=document.getElementById("s-place").value.trim();
+    var body="Headline: "+t+"\nDepartment: "+d+"\nPlace: "+pl+"\n\n"+b+"\n\n[I confirm this is true to the best of my knowledge.]";
+    location.href="mailto:desk@samtapress.in?subject="+encodeURIComponent("Story for PSP: "+t)+"&body="+encodeURIComponent(body);
+    m.textContent="Your email app should open now with the story ready. Press Send there. If nothing opened, copy your story and email it to desk@samtapress.in.";m.hidden=false;
+  });
+})();
+</script>
+
+</body></html>
